@@ -93,6 +93,38 @@ if (loadMorePosts) {
   });
 }
 
+const contactModal = document.querySelector("[data-contact-modal]");
+const contactOpen = document.querySelector("[data-contact-open]");
+const contactCloseButtons = document.querySelectorAll("[data-contact-close]");
+
+if (contactModal && contactOpen) {
+  const closeContactModal = () => {
+    contactModal.hidden = true;
+    contactOpen.focus();
+  };
+
+  const openContactModal = () => {
+    contactModal.hidden = false;
+    const firstInput = contactModal.querySelector("#contact-name");
+
+    if (firstInput) {
+      firstInput.focus();
+    }
+  };
+
+  contactOpen.addEventListener("click", openContactModal);
+
+  contactCloseButtons.forEach((button) => {
+    button.addEventListener("click", closeContactModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !contactModal.hidden) {
+      closeContactModal();
+    }
+  });
+}
+
 const newsletterForm = document.querySelector(".newsletter-form");
 
 if (newsletterForm) {

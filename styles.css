@@ -1176,6 +1176,26 @@ h3 {
   gap: 10px;
 }
 
+.footer-email-button {
+  min-height: 40px;
+  padding: 0 16px;
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.footer-email-button:hover {
+  background: var(--paper-200);
+  border-color: var(--paper-500);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
 .socials {
   display: flex;
   justify-content: flex-end;
@@ -1216,6 +1236,96 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+}
+
+.contact-modal[hidden] {
+  display: none;
+}
+
+.contact-modal {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  padding: 24px;
+  place-items: center;
+}
+
+.contact-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(36, 31, 25, 0.48);
+  backdrop-filter: blur(8px);
+}
+
+.contact-dialog {
+  position: relative;
+  width: min(100%, 560px);
+  padding: clamp(28px, 5vw, 44px);
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 24px 80px rgba(36, 31, 25, 0.24);
+}
+
+.contact-dialog__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  background: var(--paper-100);
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.contact-dialog h2 {
+  margin-bottom: 12px;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+}
+
+.contact-dialog > p:not(.eyebrow) {
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+}
+
+.contact-form {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-form label {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  background: var(--paper-50);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form button {
+  justify-self: start;
+  margin-top: 8px;
 }
 
 @media (max-width: 980px) {
