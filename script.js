@@ -32,6 +32,56 @@ if (siteHeader && menuToggle && siteNav) {
   });
 }
 
+const filterPills = document.querySelectorAll(".filter-pill");
+const postCards = document.querySelectorAll(".post-card");
+const loadMorePosts = document.querySelector("#load-more-posts");
+let activePostFilter = "all";
+let visiblePostCount = 4;
+
+const updatePosts = () => {
+  const matchingPosts = Array.from(postCards).filter((card) => {
+    return activePostFilter === "all" || card.dataset.pillar === activePostFilter;
+  });
+
+  postCards.forEach((card) => {
+    card.hidden = true;
+  });
+
+  matchingPosts.slice(0, visiblePostCount).forEach((card) => {
+    card.hidden = false;
+  });
+
+  if (loadMorePosts) {
+    loadMorePosts.hidden = matchingPosts.length <= visiblePostCount;
+  }
+};
+
+if (filterPills.length && postCards.length) {
+  filterPills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      activePostFilter = pill.dataset.filter || "all";
+      visiblePostCount = 4;
+
+      filterPills.forEach((item) => {
+        const isActive = item === pill;
+        item.classList.toggle("button--primary", isActive);
+        item.classList.toggle("button--secondary", !isActive);
+      });
+
+      updatePosts();
+    });
+  });
+
+  updatePosts();
+}
+
+if (loadMorePosts) {
+  loadMorePosts.addEventListener("click", () => {
+    visiblePostCount += 3;
+    updatePosts();
+  });
+}
+
 const newsletterForm = document.querySelector(".newsletter-form");
 
 if (newsletterForm) {
