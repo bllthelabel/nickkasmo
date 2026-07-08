@@ -1113,23 +1113,67 @@ h3 {
 
 .site-footer {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 24px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1.2fr) minmax(160px, 0.45fr) minmax(220px, 0.55fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: start;
   max-width: calc(var(--content-wide) + (var(--gutter) * 2));
   margin: 0 auto;
-  padding: 36px var(--gutter);
+  padding: 64px var(--gutter) 36px;
   color: var(--text-secondary);
   border-top: 1px solid var(--border-default);
 }
 
-.footer-mark img {
-  width: 44px;
+.footer-brand {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
 }
 
-.site-footer p {
+.footer-mark img {
+  width: 48px;
+}
+
+.footer-brand .eyebrow,
+.footer-connect .eyebrow {
+  margin-bottom: 10px;
+}
+
+.footer-brand h2 {
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.footer-brand p,
+.footer-bottom p {
   margin: 0;
-  text-align: center;
+}
+
+.footer-brand p:last-child {
+  max-width: 420px;
+  color: var(--text-secondary);
+}
+
+.footer-nav {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-nav a,
+.footer-bottom a {
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-nav a:hover,
+.footer-bottom a:hover {
+  color: var(--clay-600);
+}
+
+.footer-connect {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
 }
 
 .socials {
@@ -1154,6 +1198,24 @@ h3 {
 
 .socials img {
   width: 18px;
+}
+
+.footer-bottom {
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 36px;
+  padding-top: 24px;
+  color: var(--text-tertiary);
+  border-top: 1px solid var(--border-default);
+  font-size: 14px;
+}
+
+.footer-bottom div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 @media (max-width: 980px) {
@@ -1182,8 +1244,17 @@ h3 {
   .about-section,
   .follow-section,
   .home-hero,
-  .featured-card {
+  .featured-card,
+  .site-footer {
     grid-template-columns: 1fr;
+  }
+
+  .footer-connect {
+    justify-items: start;
+  }
+
+  .socials {
+    justify-content: flex-start;
   }
 
   .featured-card__media .image-placeholder {
@@ -1248,6 +1319,14 @@ h3 {
   .site-footer {
     align-items: flex-start;
     grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
   }
 
   .site-header {
