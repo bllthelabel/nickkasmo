@@ -400,6 +400,82 @@ h3 {
   padding-bottom: 48px;
 }
 
+.featured-section {
+  padding-top: clamp(44px, 7vw, 88px);
+  padding-bottom: 48px;
+}
+
+.featured-card {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+  overflow: hidden;
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.featured-card__media {
+  min-height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.featured-card__media .image-placeholder {
+  min-height: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.featured-card__content {
+  display: flex;
+  min-height: 430px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(28px, 5vw, 56px);
+}
+
+.featured-card h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2.7rem, 7vw, 5rem);
+}
+
+.featured-card__meta {
+  margin-bottom: 18px;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.featured-card__content p:not(.eyebrow):not(.featured-card__meta) {
+  max-width: 580px;
+  margin-bottom: 32px;
+  color: var(--text-secondary);
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.filter-block {
+  margin: -12px 0 32px;
+}
+
+.filter-block h3 {
+  margin-bottom: 14px;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.filter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .quick-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -619,6 +695,26 @@ h3 {
 
 .latest-card {
   min-height: 270px;
+}
+
+.latest-card.post-card {
+  min-height: 220px;
+  padding: 22px;
+}
+
+.latest-card.post-card span {
+  margin-bottom: 22px;
+}
+
+.latest-card.post-card h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.latest-card.post-card p {
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .latest-card span {
@@ -1033,8 +1129,17 @@ h3 {
   .hero,
   .newsletter,
   .about-section,
-  .follow-section {
+  .follow-section,
+  .featured-card {
     grid-template-columns: 1fr;
+  }
+
+  .featured-card__media .image-placeholder {
+    min-height: 280px;
+  }
+
+  .featured-card__content {
+    min-height: auto;
   }
 
   .hero {
@@ -1165,7 +1270,8 @@ h3 {
   }
 
   .hero__actions,
-  .newsletter-form div {
+  .newsletter-form div,
+  .filter-actions {
     flex-direction: column;
   }
 

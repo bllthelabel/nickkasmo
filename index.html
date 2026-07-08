@@ -40,50 +40,30 @@
     </header>
 
     <main id="top">
-      <section class="hero hero--editorial">
-        <div class="hero__copy">
-          <p class="eyebrow">Uitgelicht artikel</p>
-          <h1>Mijn espresso setup: van nul tot perfecte shot</h1>
-          <p class="hero__lead">Wat ik maak · 8 min · juli 2026</p>
-          <p class="hero__text">
-            Hoe ik granen selecteer, machines kies en door te experimenteren het echte vakmanschap leer.
-          </p>
-          <div class="hero__actions">
+      <section class="section featured-section" aria-labelledby="featured-title">
+        <article class="featured-card">
+          <a class="featured-card__media" href="blog/espresso-leren.html" aria-label="Lees Mijn espresso setup: van nul tot perfecte shot">
+            <div class="image-placeholder">
+              <div class="image-placeholder__icons" aria-hidden="true">
+                <img src="assets/icons/coffee.svg" alt="">
+                <img src="assets/icons/book-open.svg" alt="">
+                <img src="assets/icons/sparkles.svg" alt="">
+              </div>
+            </div>
+          </a>
+          <div class="featured-card__content">
+            <p class="eyebrow">Uitgelicht artikel</p>
+            <h1 id="featured-title">Mijn espresso setup: van nul tot perfecte shot</h1>
+            <p class="featured-card__meta">Wat ik maak · Espresso · Essay · 8 min · juli 2026</p>
+            <p>
+              Hoe ik granen selecteer, machines kies en door te experimenteren het echte vakmanschap leer.
+            </p>
             <a class="button button--primary" href="blog/espresso-leren.html">
               <img src="assets/icons/book-open.svg" alt="">
               Lees artikel
             </a>
-            <a class="button button--secondary" href="blog/index.html">
-              <img src="assets/icons/pencil-line.svg" alt="">
-              Archive
-            </a>
           </div>
-        </div>
-        <aside class="hero__panel" aria-label="Afbeelding van het uitgelichte artikel">
-          <div class="image-placeholder">
-            <div class="image-placeholder__icons" aria-hidden="true">
-              <img src="assets/icons/coffee.svg" alt="">
-              <img src="assets/icons/book-open.svg" alt="">
-              <img src="assets/icons/sparkles.svg" alt="">
-            </div>
-          </div>
-          <p class="panel-label">Wat ik maak</p>
-          <h2>Een artikel over beter leren maken door dagelijks te proberen.</h2>
-          <p>Espresso als kleine oefening in aandacht, materiaal, techniek en herhaling.</p>
-        </aside>
-      </section>
-
-      <section class="section quick-section" aria-labelledby="filter-title">
-        <div class="section__heading">
-          <p class="eyebrow">Verken per pijler</p>
-          <h2 id="filter-title">Kies waar je in wilt duiken</h2>
-        </div>
-        <div class="hero__actions" aria-label="Filter artikelen op pijler">
-          <button class="button button--primary filter-pill" type="button" data-filter="all">Alles</button>
-          <button class="button button--secondary filter-pill" type="button" data-filter="Wat ik maak">Wat ik maak</button>
-          <button class="button button--secondary filter-pill" type="button" data-filter="Wat ik meemaak">Wat ik meemaak</button>
-          <button class="button button--secondary filter-pill" type="button" data-filter="Wat ik doormaak">Wat ik doormaak</button>
-        </div>
+        </article>
       </section>
 
       <section class="section about-section" id="wie-is-nick" aria-labelledby="about-title">
@@ -108,51 +88,60 @@
       </section>
 
       <section class="section latest-section" id="blogs" aria-labelledby="blogs-title">
-        <div class="section__heading">
-          <p class="eyebrow">Recente artikelen</p>
-          <h2 id="blogs-title">Verhalen rond maken, meemaken en doormaken</h2>
+        <div class="section__heading section__heading--inline">
+          <div>
+            <p class="eyebrow">Recente artikelen</p>
+            <h2 id="blogs-title">Verhalen rond maken, meemaken en doormaken</h2>
+          </div>
+          <a class="text-link" href="blog/index.html">
+            Naar archive
+            <img src="assets/icons/arrow-up-right.svg" alt="">
+          </a>
+        </div>
+        <div class="filter-block" aria-labelledby="filter-title">
+          <h3 id="filter-title">Verken per pijler</h3>
+          <div class="filter-actions" aria-label="Filter artikelen op pijler">
+            <button class="button button--primary filter-pill" type="button" data-filter="all">Alles</button>
+            <button class="button button--secondary filter-pill" type="button" data-filter="Wat ik maak">Wat ik maak</button>
+            <button class="button button--secondary filter-pill" type="button" data-filter="Wat ik meemaak">Wat ik meemaak</button>
+            <button class="button button--secondary filter-pill" type="button" data-filter="Wat ik doormaak">Wat ik doormaak</button>
+          </div>
         </div>
         <div class="latest-grid">
           <article class="latest-card post-card" data-pillar="Wat ik maak" data-subtag="Espresso" data-format="Essay" data-reading-time="6 min" data-date="juli 2026">
             <span>Wat ik maak</span>
             <h3>Waarom perfectie mijn vijand was</h3>
-            <p>Essay · 6 min · juli 2026</p>
-            <p>Over espresso, beter worden door te proberen en waarom een mislukte shot soms precies is wat je nodig hebt.</p>
+            <p>Espresso · Essay · 6 min · juli 2026</p>
             <a href="blog/espresso-leren.html">Lees artikel</a>
           </article>
           <article class="latest-card post-card" data-pillar="Wat ik meemaak" data-subtag="Reizen" data-format="Reflectie" data-reading-time="9 min" data-date="juli 2026">
             <span>Wat ik meemaak</span>
             <h3>Kreta in de zomer: licht, ritme en nieuwe ideeen</h3>
-            <p>Reflectie · 9 min · juli 2026</p>
-            <p>Wat reizen me laat zien over aandacht, herinneringen en de beelden die ik mee terugneem.</p>
+            <p>Reizen · Reflectie · 9 min · juli 2026</p>
             <a href="#kreta-2026">Bekijk video</a>
           </article>
           <article class="latest-card post-card" data-pillar="Wat ik maak" data-subtag="AI Tools" data-format="Tutorial" data-reading-time="7 min" data-date="juli 2026">
             <span>Wat ik maak</span>
             <h3>AI tools voor makers: van idee tot MVP</h3>
-            <p>Tutorial · 7 min · juli 2026</p>
-            <p>Hoe kleine experimenten helpen om sneller te testen of een idee de moeite waard is.</p>
+            <p>AI Tools · Tutorial · 7 min · juli 2026</p>
             <a href="blog/nieuwste-project.html">Lees artikel</a>
           </article>
           <article class="latest-card post-card" data-pillar="Wat ik doormaak" data-subtag="Lessen" data-format="Quick tip" data-reading-time="4 min" data-date="juli 2026">
             <span>Wat ik doormaak</span>
             <h3>Wat espresso mij leert over opnieuw proberen</h3>
-            <p>Quick tip · 4 min · juli 2026</p>
-            <p>Een kleine les over consistentie, geduld en maar een ding tegelijk aanpassen.</p>
+            <p>Lessen · Quick tip · 4 min · juli 2026</p>
             <a href="blog/espresso-leren.html">Lees artikel</a>
           </article>
           <article class="latest-card post-card" data-pillar="Wat ik maak" data-subtag="Kleding" data-format="Case study" data-reading-time="10 min" data-date="juli 2026" hidden>
             <span>Wat ik maak</span>
             <h3>Tien jaar bouwen aan een kledingmerk</h3>
-            <p>Case study · 10 min · juli 2026</p>
-            <p>Over ontwerp, webshopwerk, keuzes maken en zelf blijven bouwen.</p>
+            <p>Kleding · Case study · 10 min · juli 2026</p>
             <a href="blog/kledingmerk-achter-de-schermen.html">Lees artikel</a>
           </article>
           <article class="latest-card post-card" data-pillar="Wat ik doormaak" data-subtag="Processen" data-format="Experiment" data-reading-time="5 min" data-date="juli 2026" hidden>
             <span>Wat ik doormaak</span>
             <h3>Kleine experimenten die groter mochten worden</h3>
-            <p>Experiment · 5 min · juli 2026</p>
-            <p>Over klein beginnen, sneller leren en pas daarna groter maken.</p>
+            <p>Processen · Experiment · 5 min · juli 2026</p>
             <a href="blog/nieuwste-project.html">Lees artikel</a>
           </article>
         </div>
