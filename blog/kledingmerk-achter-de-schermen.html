@@ -43,21 +43,82 @@
     </header>
 
     <main>
-      <article class="article">
-        <a class="back-link" href="wat-ik-maak/">Wat ik maak</a>
-        <p class="eyebrow">Wat ik maak</p>
-        <h1>Achter de schermen van mijn kledingmerk</h1>
-        <p class="article-meta">Kleding · Case study · 5 min lezen</p>
-        <div class="article-summary">
-          <p>Mijn kledingmerk is geen rechte lijn, maar een lang proces van ontwerpen, testen, kiezen en opnieuw beginnen. Juist de stappen achter het eindproduct maken het interessant.</p>
-        </div>
-        <div class="article-body">
-          <p>Al meer dan tien jaar bouw ik aan mijn eigen kledingmerk. Dat klinkt misschien als een rechte lijn, maar in de praktijk is het vooral veel proberen, aanpassen en opnieuw beginnen.</p>
-          <p>Ik hou van het hele proces. Niet alleen het eindproduct, maar ook de keuzes ervoor: welk materiaal, welke pasvorm, welke foto, welke tekst op de webshop.</p>
-          <h2>Van idee tot eindproduct</h2>
-          <p>Het mooiste en lastigste is dat alles met elkaar verbonden is. Een ontwerp is niet klaar als het mooi is. Het moet ook geproduceerd, gefotografeerd, verkocht en gedragen worden.</p>
-          <p>Daarom blijft het voor mij interessant. Elk product is een klein project. En elk project leert me weer iets over smaak, geduld en doorzetten.</p>
-          <p>Het is geen rechte lijn. Het is bouwen, twijfelen, aanpassen en opnieuw proberen. Precies daarom past het zo goed bij NickKasmo.</p>
+      <article class="article article--with-hero">
+        <figure class="article-hero-media" aria-label="Abstracte kledingmerk visual">
+          <div class="image-placeholder">
+            <div class="image-placeholder__icons" aria-hidden="true">
+              <img src="../assets/icons/shirt.svg" alt="">
+              <img src="../assets/icons/pencil-line.svg" alt="">
+              <img src="../assets/icons/camera.svg" alt="">
+            </div>
+          </div>
+        </figure>
+
+        <header class="article-header">
+          <nav class="breadcrumbs" aria-label="Broodkruimelpad">
+            <a href="../index.html">Home</a>
+            <span>/</span>
+            <a href="index.html">Blog</a>
+            <span>/</span>
+            <a href="wat-ik-maak/">Wat ik maak</a>
+          </nav>
+          <p class="eyebrow">Wat ik maak</p>
+          <h1>Achter de schermen van mijn kledingmerk</h1>
+          <div class="article-meta-list" aria-label="Artikel metadata">
+            <span>Nick Kasmo</span>
+            <span>8 juli 2026</span>
+            <span>5 min lezen</span>
+            <a href="wat-ik-maak/">Wat ik maak</a>
+          </div>
+          <div class="article-summary">
+            <p>Mijn kledingmerk is geen rechte lijn, maar een lang proces van ontwerpen, testen, kiezen en opnieuw beginnen. Juist de stappen achter het eindproduct maken het interessant.</p>
+          </div>
+        </header>
+
+        <div class="article-layout">
+          <aside class="article-toc" aria-labelledby="toc-title">
+            <h2 id="toc-title">In dit artikel</h2>
+            <a href="#proces">Het proces</a>
+            <a href="#idee-product">Van idee tot product</a>
+            <a href="#waarom">Waarom het blijft boeien</a>
+          </aside>
+
+          <div>
+            <div class="article-body">
+              <h2 id="proces">Het proces achter het merk</h2>
+              <p>Al meer dan tien jaar bouw ik aan mijn eigen kledingmerk. Dat klinkt misschien als een rechte lijn, maar in de praktijk is het vooral veel proberen, aanpassen en opnieuw beginnen.</p>
+              <p>Ik hou van het hele proces. Niet alleen het eindproduct, maar ook de keuzes ervoor: welk materiaal, welke pasvorm, welke foto, welke tekst op de webshop.</p>
+              <blockquote>Een ontwerp is pas echt interessant als het de stap naar gebruik, verkoop en verhaal overleeft.</blockquote>
+              <h2 id="idee-product">Van idee tot eindproduct</h2>
+              <p>Het mooiste en lastigste is dat alles met elkaar verbonden is. Een ontwerp is niet klaar als het mooi is. Het moet ook geproduceerd, gefotografeerd, verkocht en gedragen worden.</p>
+              <p>Daarom blijft het voor mij interessant. Elk product is een klein project. En elk project leert me weer iets over smaak, geduld en doorzetten.</p>
+              <h2 id="waarom">Waarom het zo goed bij NickKasmo past</h2>
+              <p>Het is geen rechte lijn. Het is bouwen, twijfelen, aanpassen en opnieuw proberen. Precies daarom past het zo goed bij NickKasmo.</p>
+            </div>
+
+            <section class="article-afterword" aria-labelledby="author-title">
+              <div class="author-box">
+                <p class="eyebrow">Auteur</p>
+                <h2 id="author-title">Nick Kasmo</h2>
+                <p>Content marketeer, maker en nieuwsgierige bouwer. Ik deel wat ik maak, meemaak en doormaak.</p>
+              </div>
+              <div class="article-cta">
+                <p class="eyebrow">Blijf onderweg</p>
+                <h2>Meer notities over maken en leren?</h2>
+                <p>Af en toe een verhaal over projecten, koffie, reizen en wat ik onderweg ontdek.</p>
+                <a class="button button--primary" href="../index.html#nieuwsbrief">Inschrijven op nieuwsbrief</a>
+              </div>
+            </section>
+
+            <section class="related-articles" aria-labelledby="related-title">
+              <p class="eyebrow">Lees verder</p>
+              <h2 id="related-title">Gerelateerde artikelen</h2>
+              <div class="related-grid">
+                <a href="nieuwste-project.html">Een klein AI-experiment om sneller te beginnen</a>
+                <a href="espresso-leren.html">Wat espresso mij leert over opnieuw proberen</a>
+              </div>
+            </section>
+          </div>
         </div>
       </article>
     </main>
@@ -92,6 +153,8 @@
           "name": "NickKasmo.nl",
           "url": "https://nickkasmo.nl/"
         },
+        "image": "https://nickkasmo.nl/assets/nickkasmo.nl%20logo.png",
+        "inLanguage": "nl-NL",
         "mainEntityOfPage": "https://nickkasmo.nl/blog/kledingmerk-achter-de-schermen.html",
         "articleSection": "Wat ik maak",
         "keywords": ["Kleding", "Case study", "Merk bouwen", "Design"],
