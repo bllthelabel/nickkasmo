@@ -1,24 +1,72 @@
-# Nick Kasmo Website
+# NickKasmo.nl
 
-Een simpele statische website die direct werkt met GitHub Pages.
+Statische website voor `nickkasmo.nl`, gehost via GitHub Pages.
 
 ## Lokaal bekijken
 
-Open `index.html` in je browser, of start een lokale server:
+Start een lokale server vanuit de projectmap:
 
 ```bash
 python3 -m http.server 4173
 ```
 
-Ga daarna naar `http://localhost:4173`.
+Open daarna `http://localhost:4173`.
 
-## Publiceren met GitHub Pages
+## GitHub Pages instellingen
 
-1. Maak een repository aan op GitHub.
-2. Push deze bestanden naar de `main` branch.
-3. Ga in GitHub naar `Settings` -> `Pages`.
-4. Kies `Deploy from a branch`.
-5. Selecteer `main` en `/ (root)`.
-6. Klik op `Save`.
+Gebruik deze instellingen in GitHub:
 
-Na korte tijd staat de site online via GitHub Pages.
+- Repository: `bllthelabel/nickkasmo`
+- Branch: `main`
+- Folder: `/ (root)`
+- Custom domain: `nickkasmo.nl`
+- HTTPS: `Enforce HTTPS` aanzetten zodra GitHub dit toestaat
+
+De `CNAME` file bewaart het custom domain bij nieuwe deploys.
+
+## DNS voor nickkasmo.nl
+
+Voor het hoofddomein staan deze A-records bij de DNS-provider:
+
+```text
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+Optioneel kan `www` als CNAME naar `bllthelabel.github.io` wijzen.
+
+## Publiceren
+
+Maak wijzigingen lokaal, controleer ze, commit en push naar `main`:
+
+```bash
+git status
+git add .
+git commit -m "Update NickKasmo website"
+git push
+```
+
+GitHub Pages publiceert daarna automatisch de nieuwste versie.
+
+## SEO en onderhoud
+
+Bij nieuwe pagina's of blogposts:
+
+- Voeg een duidelijke `<title>` en meta description toe.
+- Voeg een canonical URL toe.
+- Voeg Open Graph en Twitter Card tags toe.
+- Voeg de pagina toe aan `sitemap.xml`.
+- Gebruik logische headings: een `h1`, daarna `h2` en `h3`.
+- Gebruik beschrijvende alt-teksten voor echte afbeeldingen.
+
+Aanwezige SEO-bestanden:
+
+- `robots.txt`
+- `sitemap.xml`
+- `CNAME`
+
+## Veiligheid
+
+Zet nooit API-keys, wachtwoorden, tokens of persoonlijke exports in deze repository. Alles in deze repo kan publiek zichtbaar zijn zodra de repository openbaar is.
