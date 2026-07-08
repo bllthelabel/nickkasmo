@@ -808,7 +808,8 @@ h3 {
   gap: 10px;
 }
 
-.follow-links a {
+.follow-links a,
+.follow-links button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -818,11 +819,18 @@ h3 {
   border: 1px solid rgba(247, 242, 236, 0.16);
   border-radius: var(--radius-md);
   color: var(--paper-50);
+  cursor: pointer;
+  font: inherit;
   font-weight: 600;
   text-decoration: none;
 }
 
-.follow-links a:hover {
+.follow-links button {
+  text-align: left;
+}
+
+.follow-links a:hover,
+.follow-links button:hover {
   background: rgba(251, 248, 244, 0.14);
 }
 
@@ -1069,6 +1077,12 @@ h3 {
   color: var(--paper-400);
 }
 
+.newsletter-form span {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--paper-400);
+}
+
 .newsletter-form div {
   display: flex;
   gap: 10px;
@@ -1130,7 +1144,7 @@ h3 {
 }
 
 .footer-mark img {
-  width: 48px;
+  width: min(220px, 64vw);
 }
 
 .footer-brand .eyebrow,

@@ -96,6 +96,10 @@ if (loadMorePosts) {
 const contactModal = document.querySelector("[data-contact-modal]");
 const contactOpen = document.querySelector("[data-contact-open]");
 const contactCloseButtons = document.querySelectorAll("[data-contact-close]");
+const newsletterModal = document.querySelector("[data-newsletter-modal]");
+const newsletterOpenButtons = document.querySelectorAll("[data-newsletter-open]");
+const newsletterCloseButtons = document.querySelectorAll("[data-newsletter-close]");
+let lastModalTrigger = null;
 
 if (contactModal && contactOpen) {
   const closeContactModal = () => {
@@ -104,6 +108,7 @@ if (contactModal && contactOpen) {
   };
 
   const openContactModal = () => {
+    lastModalTrigger = contactOpen;
     contactModal.hidden = false;
     const firstInput = contactModal.querySelector("#contact-name");
 
@@ -125,7 +130,43 @@ if (contactModal && contactOpen) {
   });
 }
 
-const newsletterForm = document.querySelector(".newsletter-form");
+if (newsletterModal && newsletterOpenButtons.length) {
+  const closeNewsletterModal = () => {
+    newsletterModal.hidden = true;
+
+    if (lastModalTrigger) {
+      lastModalTrigger.focus();
+    }
+  };
+
+  const openNewsletterModal = (trigger) => {
+    lastModalTrigger = trigger;
+    newsletterModal.hidden = false;
+    const emailInput = newsletterModal.querySelector("#newsletter-modal-email");
+
+    if (emailInput) {
+      emailInput.focus();
+    }
+  };
+
+  newsletterOpenButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      openNewsletterModal(button);
+    });
+  });
+
+  newsletterCloseButtons.forEach((button) => {
+    button.addEventListener("click", closeNewsletterModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !newsletterModal.hidden) {
+      closeNewsletterModal();
+    }
+  });
+}
+
+const newsletterForm = document.querySelector(".newsletter-modal-form");
 
 if (newsletterForm) {
   newsletterForm.addEventListener("submit", (event) => {
