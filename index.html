@@ -79,7 +79,7 @@
 
       <section class="section featured-section" aria-labelledby="featured-title">
         <article class="featured-card">
-          <a class="featured-card__media" href="blog/espresso-leren.html" aria-label="Lees Mijn espresso setup: van nul tot perfecte shot">
+          <div class="featured-card__media" aria-hidden="true">
             <div class="image-placeholder">
               <div class="image-placeholder__icons" aria-hidden="true">
                 <img src="assets/icons/coffee.svg" alt="">
@@ -87,18 +87,18 @@
                 <img src="assets/icons/sparkles.svg" alt="">
               </div>
             </div>
-          </a>
+          </div>
           <div class="featured-card__content">
-            <p class="eyebrow">Uitgelicht artikel</p>
-            <h1 id="featured-title">Wat espresso mij leert over opnieuw proberen</h1>
-            <p class="featured-card__meta">Wat ik doormaak · Espresso · Lessen · 4 min · juli 2026</p>
+            <p class="eyebrow">Binnenkort op de blog</p>
+            <h1 id="featured-title">Eerste eigen verhalen in voorbereiding.</h1>
+            <p class="featured-card__meta">Maken · Meemaken · Doormaken</p>
             <p>
-              Elke espresso is een kleine test. Door een ding tegelijk aan te passen leer ik sneller wat werkt, wat niet werkt en waarom opnieuw proberen vaak waardevoller is dan meteen perfect willen zijn.
+              Ik publiceer hier alleen artikelen die ik zelf heb geschreven en echt wil delen. Tot die tijd verzamel ik mijn gedachten, experimenten en lessen achter de schermen.
             </p>
-            <a class="button button--primary" href="blog/espresso-leren.html">
-              <img src="assets/icons/book-open.svg" alt="">
-              Lees artikel
-            </a>
+            <button class="button button--primary" type="button" data-newsletter-open>
+              <img src="assets/icons/mail.svg" alt="">
+              Blijf op de hoogte
+            </button>
           </div>
         </article>
       </section>
@@ -145,45 +145,12 @@
           </div>
         </div>
         <div class="latest-grid">
-          <article class="latest-card post-card" data-pillar="Wat ik maak" data-subtag="Espresso" data-format="Essay" data-reading-time="6 min" data-date="juli 2026">
-            <span>Wat ik maak</span>
-            <h3>Waarom perfectie mijn espresso niet beter maakte</h3>
-            <p>Espresso · Essay · 6 min · juli 2026</p>
-            <a href="blog/espresso-leren.html">Lees artikel</a>
+          <article class="latest-card">
+            <span>Blog</span>
+            <h3>Nog geen gepubliceerde artikelen</h3>
+            <p>Ik toon hier straks alleen stukken die ik zelf heb gepubliceerd.</p>
+            <button type="button" data-newsletter-open>Ontvang de eerste update</button>
           </article>
-          <article class="latest-card post-card" data-pillar="Wat ik meemaak" data-subtag="Reizen" data-format="Reflectie" data-reading-time="9 min" data-date="juli 2026">
-            <span>Wat ik meemaak</span>
-            <h3>Kreta in de zomer: wat reizen in beweging zet</h3>
-            <p>Reizen · Reflectie · 9 min · juli 2026</p>
-            <a href="#kreta-2026">Bekijk video</a>
-          </article>
-          <article class="latest-card post-card" data-pillar="Wat ik maak" data-subtag="AI Tools" data-format="Tutorial" data-reading-time="7 min" data-date="juli 2026">
-            <span>Wat ik maak</span>
-            <h3>Een klein AI-experiment om sneller te beginnen</h3>
-            <p>AI Tools · Tutorial · 7 min · juli 2026</p>
-            <a href="blog/nieuwste-project.html">Lees artikel</a>
-          </article>
-          <article class="latest-card post-card" data-pillar="Wat ik doormaak" data-subtag="Lessen" data-format="Quick tip" data-reading-time="4 min" data-date="juli 2026">
-            <span>Wat ik doormaak</span>
-            <h3>Wat een mislukte shot mij leerde over doorgaan</h3>
-            <p>Lessen · Quick tip · 4 min · juli 2026</p>
-            <a href="blog/espresso-leren.html">Lees artikel</a>
-          </article>
-          <article class="latest-card post-card" data-pillar="Wat ik maak" data-subtag="Kleding" data-format="Case study" data-reading-time="10 min" data-date="juli 2026" hidden>
-            <span>Wat ik maak</span>
-            <h3>Tien jaar bouwen aan een kledingmerk</h3>
-            <p>Kleding · Case study · 10 min · juli 2026</p>
-            <a href="blog/kledingmerk-achter-de-schermen.html">Lees artikel</a>
-          </article>
-          <article class="latest-card post-card" data-pillar="Wat ik doormaak" data-subtag="Processen" data-format="Experiment" data-reading-time="5 min" data-date="juli 2026" hidden>
-            <span>Wat ik doormaak</span>
-            <h3>Klein beginnen maakt falen minder zwaar</h3>
-            <p>Processen · Experiment · 5 min · juli 2026</p>
-            <a href="blog/nieuwste-project.html">Lees artikel</a>
-          </article>
-        </div>
-        <div class="hero__actions">
-          <button class="button button--secondary" id="load-more-posts" type="button">Meer artikelen laden</button>
         </div>
       </section>
 
@@ -264,14 +231,14 @@
             <span>Kleding</span>
             <h3>Kledingmerk</h3>
             <p>Nieuwe designs, webshopwerk en de keuzes achter iets dat ik al jaren zelf bouw.</p>
-            <a href="blog/kledingmerk-achter-de-schermen.html">Lees meer</a>
+            <a href="blog/wat-ik-maak/">Bekijk pijler</a>
           </article>
           <article class="gear-card">
             <div class="gear-card__icon"><img src="assets/icons/sparkles.svg" alt=""></div>
             <span>AI Tools</span>
             <h3>AI experimenten</h3>
             <p>Kleine tools en prototypes waarmee ik sneller kan proberen, leren en bijsturen.</p>
-            <a href="blog/nieuwste-project.html">Bekijk project</a>
+            <a href="blog/wat-ik-maak/">Bekijk pijler</a>
           </article>
           <article class="gear-card">
             <div class="gear-card__icon"><img src="assets/icons/camera.svg" alt=""></div>
@@ -338,6 +305,8 @@
         <div class="follow-links">
           <button type="button" data-newsletter-open>Inschrijven op nieuwsbrief</button>
           <a href="https://www.instagram.com/nickkasmo/" target="_blank" rel="noreferrer"><img src="assets/icons/instagram.svg" alt="">Instagram</a>
+          <a href="https://www.youtube.com/@nickkasmo" target="_blank" rel="noreferrer"><img src="assets/icons/youtube.svg" alt="">YouTube</a>
+          <a href="https://www.linkedin.com/in/nick-kasmo-347573a3/" target="_blank" rel="noreferrer"><img src="assets/icons/linkedin.svg?v=2a9861b" alt="">LinkedIn</a>
         </div>
       </section>
     </main>
@@ -365,6 +334,8 @@
         <p class="eyebrow">Loop mee</p>
         <div class="socials" aria-label="Social links">
           <a href="https://www.instagram.com/nickkasmo/" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+          <a href="https://www.youtube.com/@nickkasmo" target="_blank" rel="noreferrer" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt=""></a>
+          <a href="https://www.linkedin.com/in/nick-kasmo-347573a3/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg?v=2a9861b" alt=""></a>
         </div>
         <button class="footer-email-button" type="button" data-contact-open>Stuur een bericht</button>
       </div>

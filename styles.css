@@ -625,19 +625,29 @@ h3 {
 }
 
 .latest-card a,
+.latest-card button,
 .blog-list-card a,
+.blog-list-card button,
 .back-link {
+  border: 0;
+  padding: 0;
   color: var(--clay-600);
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
   font-weight: 600;
   text-decoration: none;
 }
 
-.latest-card a {
+.latest-card a,
+.latest-card button {
   margin-top: auto;
 }
 
 .latest-card a:hover,
+.latest-card button:hover,
 .blog-list-card a:hover,
+.blog-list-card button:hover,
 .back-link:hover {
   color: var(--clay-500);
 }
