@@ -811,19 +811,31 @@ h3 {
   padding: 24px;
 }
 
-.item-card span,
-.item-row span {
-  margin-bottom: 14px;
-  color: var(--clay-600);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
 .item-card p,
 .item-row p {
   color: var(--text-secondary);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tag-list span {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 0 10px;
+  background: var(--paper-200);
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+  color: var(--clay-600);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .item-card__action {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Items, producten en software die Nick Kasmo gebruikt voor koffie, video, reizen, kledingmerk, AI en creatieve projecten.">
+    <meta name="description" content="Items, producten en software die Nick Kasmo gebruikt, georganiseerd met tags zoals koffie, video, software, AI, reizen en dagelijks gebruik.">
     <meta name="theme-color" content="#f4eee6">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://nickkasmo.nl/items/">
@@ -11,12 +11,12 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NickKasmo.nl">
     <meta property="og:title" content="Items die ik gebruik - NickKasmo.nl">
-    <meta property="og:description" content="Een overzicht van spullen, producten en software die terugkomen in het maken, filmen, reizen en experimenteren.">
+    <meta property="og:description" content="Een tag-gedreven overzicht van spullen, producten en software die terugkomen in mijn proces.">
     <meta property="og:url" content="https://nickkasmo.nl/items/">
     <meta property="og:image" content="https://nickkasmo.nl/assets/nickkasmo.nl%20logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Items die ik gebruik - NickKasmo.nl">
-    <meta name="twitter:description" content="Spullen, producten en software die Nick gebruikt in zijn creatieve proces.">
+    <meta name="twitter:description" content="Spullen, producten en software die Nick gebruikt, gefilterd op tags.">
     <meta name="twitter:image" content="https://nickkasmo.nl/assets/nickkasmo.nl%20logo.png">
     <title>Items die ik gebruik - NickKasmo.nl</title>
     <link rel="icon" href="../assets/brand/icon.svg" type="image/svg+xml">
@@ -46,98 +46,126 @@
     <main>
       <section class="items-hero">
         <p class="eyebrow">Items die ik gebruik</p>
-        <h1>Spullen, producten en software uit mijn proces.</h1>
-        <p>Een verzameling van dingen die terugkomen in mijn koffieroutine, video-workflow, reizen, kledingmerk en AI-experimenten.</p>
+        <h1>Een tagbaar overzicht van spullen, producten en software.</h1>
+        <p>Geen vaste categorieen waar alles precies in moet passen, maar items met meerdere tags. Zo kan een camera tegelijk bij video, reizen en dagelijks gebruik horen.</p>
         <p class="affiliate-note">Sommige links kunnen affiliate links zijn. Als je via zo'n link iets koopt, kan ik daar een kleine vergoeding voor krijgen. Jij betaalt niets extra.</p>
       </section>
 
-      <section class="section items-section" aria-labelledby="coffee-items-title">
-        <div class="section__heading">
-          <p class="eyebrow">Koffie</p>
-          <h2 id="coffee-items-title">Mijn espresso setup</h2>
-          <p class="section-intro">De spullen die ik gebruik om dagelijks te oefenen met espresso, workflow en kleine verbeteringen.</p>
+      <section class="section items-section" aria-labelledby="items-overview-title">
+        <div class="section__heading section__heading--inline">
+          <div>
+            <p class="eyebrow">Alle items</p>
+            <h2 id="items-overview-title">Filter op tags</h2>
+          </div>
+        </div>
+        <div class="filter-block" aria-labelledby="item-filter-title">
+          <h3 id="item-filter-title">Tags</h3>
+          <div class="filter-actions" aria-label="Filter items op tag">
+            <button class="button button--primary item-filter-pill" type="button" data-item-filter="all">Alles</button>
+            <button class="button button--secondary item-filter-pill" type="button" data-item-filter="koffie">Koffie</button>
+            <button class="button button--secondary item-filter-pill" type="button" data-item-filter="video">Video</button>
+            <button class="button button--secondary item-filter-pill" type="button" data-item-filter="software">Software</button>
+            <button class="button button--secondary item-filter-pill" type="button" data-item-filter="ai">AI</button>
+            <button class="button button--secondary item-filter-pill" type="button" data-item-filter="reizen">Reizen</button>
+            <button class="button button--secondary item-filter-pill" type="button" data-item-filter="hardware">Hardware</button>
+          </div>
         </div>
         <div class="item-list">
-          <article class="item-row">
+          <article class="item-row" data-tags="koffie hardware dagelijks-gebruik affiliate">
             <div class="item-row__media"><img src="../assets/icons/coffee.svg" alt=""></div>
             <div class="item-row__content">
-              <span>Koffie · Machine</span>
+              <div class="tag-list" aria-label="Tags">
+                <span>koffie</span>
+                <span>hardware</span>
+                <span>dagelijks gebruik</span>
+                <span>affiliate</span>
+              </div>
               <h3>Sage Barista Express</h3>
               <p>Mijn dagelijkse espressomachine. Ideaal om maalgraad, dosering, extractie en melk opschuimen echt te leren begrijpen.</p>
               <button type="button" class="item-card__action" disabled>Affiliate link toevoegen</button>
             </div>
           </article>
-          <article class="item-row">
+          <article class="item-row" data-tags="koffie hardware accessoire affiliate">
             <div class="item-row__media"><img src="../assets/icons/coffee.svg" alt=""></div>
             <div class="item-row__content">
-              <span>Koffie · Accessoire</span>
+              <div class="tag-list" aria-label="Tags">
+                <span>koffie</span>
+                <span>hardware</span>
+                <span>accessoire</span>
+                <span>affiliate</span>
+              </div>
               <h3>Portafilter</h3>
               <p>Een accessoire voor consistenter werken en beter zien wat er tijdens een shot gebeurt.</p>
               <button type="button" class="item-card__action" disabled>Affiliate link toevoegen</button>
             </div>
           </article>
-          <article class="item-row">
+          <article class="item-row" data-tags="koffie workflow accessoire affiliate">
             <div class="item-row__media"><img src="../assets/icons/coffee.svg" alt=""></div>
             <div class="item-row__content">
-              <span>Koffie · Workflow</span>
+              <div class="tag-list" aria-label="Tags">
+                <span>koffie</span>
+                <span>workflow</span>
+                <span>accessoire</span>
+                <span>affiliate</span>
+              </div>
               <h3>Koffieweegschaal</h3>
               <p>Voor het meten van input, output en timing. Klein item, groot verschil als je espresso serieuzer wilt begrijpen.</p>
               <button type="button" class="item-card__action" disabled>Affiliate link toevoegen</button>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section class="section items-section" aria-labelledby="video-items-title">
-        <div class="section__heading">
-          <p class="eyebrow">Video en reizen</p>
-          <h2 id="video-items-title">Vastleggen zonder gedoe</h2>
-          <p class="section-intro">Items die helpen om snel te filmen, ook wanneer ik koffie maak of onderweg ben.</p>
-        </div>
-        <div class="item-list">
-          <article class="item-row">
+          <article class="item-row" data-tags="video reizen hardware dagelijks-gebruik affiliate">
             <div class="item-row__media"><img src="../assets/icons/camera.svg" alt=""></div>
             <div class="item-row__content">
-              <span>Video · Camera</span>
+              <div class="tag-list" aria-label="Tags">
+                <span>video</span>
+                <span>reizen</span>
+                <span>hardware</span>
+                <span>dagelijks gebruik</span>
+              </div>
               <h3>Camera setup</h3>
               <p>De basis waarmee ik koffievideo's, vakantiebeelden en behind-the-scenes content vastleg.</p>
               <button type="button" class="item-card__action" disabled>Affiliate link toevoegen</button>
             </div>
           </article>
-          <article class="item-row">
+          <article class="item-row" data-tags="video hardware accessoire reizen affiliate">
             <div class="item-row__media"><img src="../assets/icons/video.svg" alt=""></div>
             <div class="item-row__content">
-              <span>Video · Accessoire</span>
+              <div class="tag-list" aria-label="Tags">
+                <span>video</span>
+                <span>hardware</span>
+                <span>accessoire</span>
+                <span>reizen</span>
+              </div>
               <h3>Statief of mount</h3>
               <p>Voor vaste shots tijdens het maken van koffie en rustige beelden onderweg.</p>
               <button type="button" class="item-card__action" disabled>Affiliate link toevoegen</button>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section class="section items-section" aria-labelledby="software-items-title">
-        <div class="section__heading">
-          <p class="eyebrow">Software</p>
-          <h2 id="software-items-title">Tools voor maken en experimenteren</h2>
-          <p class="section-intro">Software die ik gebruik om ideeen te ordenen, sneller te testen en content beter af te maken.</p>
-        </div>
-        <div class="item-list">
-          <article class="item-row">
+          <article class="item-row" data-tags="software ai maken workflow affiliate">
             <div class="item-row__media"><img src="../assets/icons/sparkles.svg" alt=""></div>
             <div class="item-row__content">
-              <span>Software · AI</span>
+              <div class="tag-list" aria-label="Tags">
+                <span>software</span>
+                <span>AI</span>
+                <span>maken</span>
+                <span>workflow</span>
+              </div>
               <h3>AI tools</h3>
               <p>Voor brainstorms, structuur, prototypes en kleine experimenten rond content en projecten.</p>
               <button type="button" class="item-card__action" disabled>Affiliate link toevoegen</button>
             </div>
           </article>
-          <article class="item-row">
+          <article class="item-row" data-tags="software video content workflow affiliate">
             <div class="item-row__media"><img src="../assets/icons/pencil-line.svg" alt=""></div>
             <div class="item-row__content">
-              <span>Software · Content</span>
+              <div class="tag-list" aria-label="Tags">
+                <span>software</span>
+                <span>video</span>
+                <span>content</span>
+                <span>workflow</span>
+              </div>
               <h3>Editing software</h3>
-              <p>Tools waarmee ik video's, captions en ideeën sneller van ruwe opname naar publicatie breng.</p>
+              <p>Tools waarmee ik video's, captions en ideeen sneller van ruwe opname naar publicatie breng.</p>
               <button type="button" class="item-card__action" disabled>Affiliate link toevoegen</button>
             </div>
           </article>
@@ -220,7 +248,7 @@
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Items die ik gebruik - NickKasmo.nl",
-        "description": "Items, producten en software die Nick Kasmo gebruikt voor koffie, video, reizen, kledingmerk, AI en creatieve projecten.",
+        "description": "Items, producten en software die Nick Kasmo gebruikt, georganiseerd met tags.",
         "url": "https://nickkasmo.nl/items/",
         "isPartOf": {
           "@type": "WebSite",

@@ -93,6 +93,32 @@ if (loadMorePosts) {
   });
 }
 
+const itemFilterPills = document.querySelectorAll(".item-filter-pill");
+const itemRows = document.querySelectorAll("[data-tags]");
+
+if (itemFilterPills.length && itemRows.length) {
+  const activateItemFilter = (filter) => {
+    const activeFilter = filter || "all";
+
+    itemFilterPills.forEach((item) => {
+      const isActive = item.dataset.itemFilter === activeFilter;
+      item.classList.toggle("button--primary", isActive);
+      item.classList.toggle("button--secondary", !isActive);
+    });
+
+    itemRows.forEach((item) => {
+      const tags = (item.dataset.tags || "").split(" ");
+      item.hidden = activeFilter !== "all" && !tags.includes(activeFilter);
+    });
+  };
+
+  itemFilterPills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      activateItemFilter(pill.dataset.itemFilter);
+    });
+  });
+}
+
 const contactModal = document.querySelector("[data-contact-modal]");
 const contactOpen = document.querySelector("[data-contact-open]");
 const contactCloseButtons = document.querySelectorAll("[data-contact-close]");
