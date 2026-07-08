@@ -150,7 +150,8 @@ if (newsletterModal && newsletterOpenButtons.length) {
   };
 
   newsletterOpenButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
       openNewsletterModal(button);
     });
   });
