@@ -34,12 +34,50 @@
         <span class="visually-hidden">Menu</span>
       </button>
       <nav class="nav" id="site-nav" aria-label="Hoofdnavigatie">
-        <a href="blog/index.html">Archive</a>
+        <a href="#blogs">Artikelen</a>
+        <a href="#videos">Video's</a>
+        <a href="#nieuwsbrief">Nieuwsbrief</a>
         <a href="#wie-is-nick">Over mij</a>
+        <a href="blog/index.html">Archive</a>
       </nav>
     </header>
 
     <main id="top">
+      <section class="home-hero" aria-labelledby="home-title">
+        <div class="home-hero__copy">
+          <p class="eyebrow">NickKasmo.nl</p>
+          <h1 id="home-title">Het leven van een maker.</h1>
+          <p>
+            Essays, video's en experimenten over wat ik maak, meemaak en doormaak.
+            Van espresso tot AI, van kledingmerk tot reizen.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#blogs">
+              <img src="assets/icons/book-open.svg" alt="">
+              Lees artikelen
+            </a>
+            <a class="button button--secondary" href="#videos">
+              <img src="assets/icons/video.svg" alt="">
+              Bekijk video's
+            </a>
+          </div>
+        </div>
+        <div class="home-hero__pillars" aria-label="Content pijlers">
+          <a href="#blogs" data-pillar-jump="Wat ik maak">
+            <span>Wat ik maak</span>
+            AI, websites, video's, kleding en design.
+          </a>
+          <a href="#blogs" data-pillar-jump="Wat ik meemaak">
+            <span>Wat ik meemaak</span>
+            Reizen, espresso, eten, fotografie en producten.
+          </a>
+          <a href="#blogs" data-pillar-jump="Wat ik doormaak">
+            <span>Wat ik doormaak</span>
+            Processen, lessen, mislukkingen, twijfels en keuzes.
+          </a>
+        </div>
+      </section>
+
       <section class="section featured-section" aria-labelledby="featured-title">
         <article class="featured-card">
           <a class="featured-card__media" href="blog/espresso-leren.html" aria-label="Lees Mijn espresso setup: van nul tot perfecte shot">

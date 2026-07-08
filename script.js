@@ -35,6 +35,7 @@ if (siteHeader && menuToggle && siteNav) {
 const filterPills = document.querySelectorAll(".filter-pill");
 const postCards = document.querySelectorAll(".post-card");
 const loadMorePosts = document.querySelector("#load-more-posts");
+const pillarJumps = document.querySelectorAll("[data-pillar-jump]");
 let activePostFilter = "all";
 let visiblePostCount = 4;
 
@@ -57,18 +58,28 @@ const updatePosts = () => {
 };
 
 if (filterPills.length && postCards.length) {
+  const activateFilter = (filter) => {
+    activePostFilter = filter || "all";
+    visiblePostCount = 4;
+
+    filterPills.forEach((item) => {
+      const isActive = item.dataset.filter === activePostFilter;
+      item.classList.toggle("button--primary", isActive);
+      item.classList.toggle("button--secondary", !isActive);
+    });
+
+    updatePosts();
+  };
+
   filterPills.forEach((pill) => {
     pill.addEventListener("click", () => {
-      activePostFilter = pill.dataset.filter || "all";
-      visiblePostCount = 4;
+      activateFilter(pill.dataset.filter);
+    });
+  });
 
-      filterPills.forEach((item) => {
-        const isActive = item === pill;
-        item.classList.toggle("button--primary", isActive);
-        item.classList.toggle("button--secondary", !isActive);
-      });
-
-      updatePosts();
+  pillarJumps.forEach((link) => {
+    link.addEventListener("click", () => {
+      activateFilter(link.dataset.pillarJump);
     });
   });
 
