@@ -3,159 +3,316 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="NickKasmo.nl: essays en experimenten over wat ik maak, meemaak en doormaak.">
-    <meta name="theme-color" content="#050505">
+    <meta name="description" content="NickKasmo.nl: het leven van een maker. Van espresso tot AI, kledingmerk, reizen en creatieve projecten.">
+    <meta name="theme-color" content="#f4eee6">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://nickkasmo.nl/">
     <meta property="og:locale" content="nl_NL">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NickKasmo.nl">
     <meta property="og:title" content="NickKasmo.nl - Het leven van een maker">
-    <meta property="og:description" content="Essays en experimenten over wat ik maak, meemaak en doormaak.">
+    <meta property="og:description" content="Van espresso tot AI. Van mijn kledingmerk tot reizen. Welkom in mijn creatieve wereld.">
     <meta property="og:url" content="https://nickkasmo.nl/">
     <meta property="og:image" content="https://nickkasmo.nl/assets/nickkasmo.nl%20logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="NickKasmo.nl - Het leven van een maker">
-    <meta name="twitter:description" content="Essays en experimenten over wat ik maak, meemaak en doormaak.">
+    <meta name="twitter:description" content="Van espresso tot AI. Van mijn kledingmerk tot reizen. Welkom in mijn creatieve wereld.">
     <meta name="twitter:image" content="https://nickkasmo.nl/assets/nickkasmo.nl%20logo.png">
     <title>NickKasmo.nl</title>
     <link rel="icon" href="assets/brand/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="home-shell">
-    <header class="home-header">
-      <a class="home-brand" href="#top" aria-label="Nick Kasmo home">Nick Kasmo</a>
-      <nav class="home-nav" aria-label="Hoofdnavigatie">
-        <a href="blog/index.html">Archive</a>
-        <a href="#over-mij">Over mij</a>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="NickKasmo.nl home">
+        <img src="assets/brand/logo.svg" alt="NickKasmo.nl">
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Hoofdnavigatie">
+        <a href="#wie-is-nick">Wie is Nick?</a>
+        <a href="#bezig">Nu bezig</a>
+        <a href="#gear">Gear</a>
+        <a href="#videos">Video's</a>
+        <a href="#koffie-reels">Reels</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="#volg">Volg</a>
       </nav>
     </header>
 
-    <main class="home-main" id="top">
-      <article class="featured-post">
-        <a class="featured-post__image" href="blog/espresso-leren.html" aria-label="Lees Mijn espresso setup: van nul tot perfecte shot">
-          <span>Uitgelichte afbeelding</span>
-        </a>
-        <div class="featured-post__content">
-          <div>
-            <h1>Mijn espresso setup: van nul tot perfecte shot</h1>
-            <p class="post-meta">Wat ik maak · 8 min · juli 2026</p>
-            <p>Hoe ik granen selecteer, machines kies en door te experimenteren het echte vakmanschap leer.</p>
+    <main id="top">
+      <section class="hero hero--editorial">
+        <div class="hero__copy">
+          <p class="eyebrow">Homepage</p>
+          <h1>Het leven van een maker.</h1>
+          <p class="hero__lead">Ik bouw, ontdek en deel.</p>
+          <p class="hero__text">
+            Van espresso tot AI. Van mijn kledingmerk tot reizen. Van dagelijkse koffievideo's tot grotere projecten.
+            Welkom in mijn creatieve wereld.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#videos">
+              <img src="assets/icons/coffee.svg" alt="">
+              Bekijk mijn video's
+            </a>
+            <a class="button button--secondary" href="blog/index.html">
+              <img src="assets/icons/pencil-line.svg" alt="">
+              Lees mijn verhalen
+            </a>
           </div>
-          <a class="outline-button" href="blog/espresso-leren.html">Lees artikel <span aria-hidden="true">-&gt;</span></a>
         </div>
-      </article>
+        <aside class="hero__panel" aria-label="Vandaag in beeld">
+          <div class="image-placeholder">
+            <div class="image-placeholder__icons" aria-hidden="true">
+              <img src="assets/icons/coffee.svg" alt="">
+              <img src="assets/icons/video.svg" alt="">
+              <img src="assets/icons/plane.svg" alt="">
+            </div>
+          </div>
+          <p class="panel-label">Vandaag in beeld</p>
+          <h2>Een espresso-shot, een korte video en het ritme van elke dag.</h2>
+          <p>Van bonen malen tot melk opschuimen. En wanneer ik weg ben: vakantievideo's die voelen alsof je even meeloopt.</p>
+        </aside>
+      </section>
 
-      <section class="filter-section" aria-labelledby="filter-title">
-        <h2 id="filter-title">Verken per pijler</h2>
-        <div class="filter-pills" role="list" aria-label="Filter artikelen op pijler">
-          <button class="filter-pill is-active" type="button" data-filter="all">Alles</button>
-          <button class="filter-pill" type="button" data-filter="Wat ik maak">Wat ik maak</button>
-          <button class="filter-pill" type="button" data-filter="Wat ik meemaak">Wat ik meemaak</button>
-          <button class="filter-pill" type="button" data-filter="Wat ik doormaak">Wat ik doormaak</button>
+      <section class="section quick-section" aria-labelledby="quick-title">
+        <div class="section__heading section__heading--inline">
+          <div>
+            <p class="eyebrow">Nu te zien</p>
+            <h2 id="quick-title">Direct naar wat nieuw is</h2>
+          </div>
+          <a class="text-link" href="https://www.instagram.com/nickkasmo/" target="_blank" rel="noreferrer">
+            Open Instagram
+            <img src="assets/icons/arrow-up-right.svg" alt="">
+          </a>
+        </div>
+        <div class="quick-grid">
+          <a class="quick-card" href="#koffie-reels">
+            <img src="assets/icons/coffee.svg" alt="">
+            <span>Meest bekeken koffie Reels</span>
+          </a>
+          <a class="quick-card" href="#kreta-2026">
+            <img src="assets/icons/plane.svg" alt="">
+            <span>Kreta 2026</span>
+          </a>
+          <a class="quick-card" href="blog/index.html">
+            <img src="assets/icons/book-open.svg" alt="">
+            <span>Laatste verhalen</span>
+          </a>
         </div>
       </section>
 
-      <section class="articles-section" aria-labelledby="articles-title">
-        <h2 id="articles-title">Recente artikelen</h2>
-        <div class="article-grid">
-          <a class="article-card" href="blog/espresso-leren.html" data-pillar="Wat ik maak">
-            <span class="article-card__image">Afbeelding</span>
-            <span class="article-card__body">
-              <span class="article-card__title">Waarom perfectie mijn vijand was</span>
-              <span class="article-card__meta">Wat ik maak</span>
-              <span class="article-card__meta">Essay · 6 min</span>
-            </span>
-          </a>
-          <a class="article-card" href="blog/kledingmerk-achter-de-schermen.html" data-pillar="Wat ik meemaak">
-            <span class="article-card__image">Afbeelding</span>
-            <span class="article-card__body">
-              <span class="article-card__title">Kreta in de zomer: licht, ritme en nieuwe ideeen</span>
-              <span class="article-card__meta">Wat ik meemaak</span>
-              <span class="article-card__meta">Reflectie · 9 min</span>
-            </span>
-          </a>
-          <a class="article-card" href="blog/nieuwste-project.html" data-pillar="Wat ik maak">
-            <span class="article-card__image">Afbeelding</span>
-            <span class="article-card__body">
-              <span class="article-card__title">AI tools voor makers: van idee tot MVP</span>
-              <span class="article-card__meta">Wat ik maak</span>
-              <span class="article-card__meta">Tutorial · 7 min</span>
-            </span>
-          </a>
-          <a class="article-card" href="blog/espresso-leren.html" data-pillar="Wat ik doormaak">
-            <span class="article-card__image">Afbeelding</span>
-            <span class="article-card__body">
-              <span class="article-card__title">Wat espresso mij leert over opnieuw proberen</span>
-              <span class="article-card__meta">Wat ik doormaak</span>
-              <span class="article-card__meta">Quick tip · 4 min</span>
-            </span>
-          </a>
-          <a class="article-card" href="blog/kledingmerk-achter-de-schermen.html" data-pillar="Wat ik maak">
-            <span class="article-card__image">Afbeelding</span>
-            <span class="article-card__body">
-              <span class="article-card__title">Tien jaar bouwen aan een kledingmerk</span>
-              <span class="article-card__meta">Wat ik maak</span>
-              <span class="article-card__meta">Case study · 10 min</span>
-            </span>
-          </a>
-          <a class="article-card" href="blog/nieuwste-project.html" data-pillar="Wat ik doormaak">
-            <span class="article-card__image">Afbeelding</span>
-            <span class="article-card__body">
-              <span class="article-card__title">Kleine experimenten die groter mochten worden</span>
-              <span class="article-card__meta">Wat ik doormaak</span>
-              <span class="article-card__meta">Experiment · 5 min</span>
-            </span>
-          </a>
+      <section class="section about-section" id="wie-is-nick" aria-labelledby="about-title">
+        <div class="section__heading">
+          <p class="eyebrow">Wie is Nick?</p>
+          <h2 id="about-title">Hi, ik ben Nick.</h2>
         </div>
-        <button class="load-more" type="button">Meer artikelen laden</button>
+        <div class="prose-block">
+          <p>
+            Doordeweeks werk ik als content marketeer. Daarnaast bouw ik al meer dan tien jaar aan mijn eigen kledingmerk, experimenteer ik met AI, maak ik video's en ben ik altijd bezig met nieuwe ideeën.
+          </p>
+          <p>
+            De laatste tijd ben ik bovendien volledig in de wereld van espresso gedoken. Vrijwel iedere dag probeer ik mijn koffie net iets beter te zetten. Ook tijdens vakanties neem ik mijn camera mee om de plekken die ik bezoek vast te leggen.
+          </p>
+          <p>
+            NickKasmo is de plek waar al die interesses samenkomen.
+          </p>
+          <p>
+            Niet omdat ze hetzelfde zijn. Maar omdat ze allemaal beginnen met nieuwsgierigheid.
+          </p>
+        </div>
       </section>
 
-      <section class="newsletter-panel" aria-labelledby="newsletter-title">
-        <h2 id="newsletter-title">Wekelijkse essays over het maken en leren</h2>
-        <p>Een artikel per week. Je kunt je altijd afmelden.</p>
-        <form class="newsletter-form">
-          <label class="visually-hidden" for="newsletter-email">E-mailadres</label>
-          <input id="newsletter-email" type="email" name="email" placeholder="jouw@email.com">
-          <button type="submit">Inschrijven</button>
-        </form>
-        <p class="newsletter-note">Geen spam. Geen onverwachte veranderingen in je inbox.</p>
-      </section>
-
-      <section class="phase-section" aria-labelledby="phase-title">
-        <h2 id="phase-title">Optionele secties later toe te voegen</h2>
-        <div class="phase-grid">
-          <article class="phase-card">
-            <h3>Recente video's</h3>
-            <p>Instagram/YouTube feed integreren met 3-4 recentste uploads</p>
-            <p>Grid van video thumbnails</p>
+      <section class="section focus-section" id="bezig" aria-labelledby="focus-title">
+        <div class="section__heading">
+          <p class="eyebrow">Waar ik momenteel mee bezig ben</p>
+          <h2 id="focus-title">Vier lijnen die steeds terugkomen</h2>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-card">
+            <div class="focus-card__icon"><img src="assets/icons/coffee.svg" alt=""></div>
+            <h3>Espresso</h3>
+            <p>Iedere dag probeer ik een betere espresso te zetten.</p>
+            <p>Ik experimenteer met bonen, maalgraad, recepten en techniek. Geen barista die alles weet, maar iemand die elke dag iets nieuws leert.</p>
+            <a href="#koffie-reels">Bekijk mijn laatste koffievideo's</a>
           </article>
-          <article class="phase-card" id="over-mij">
-            <h3>Huidige projecten</h3>
-            <p>Kledingmerk, AI experimenten, wat je net hebt gelanceerd</p>
-            <p>Cards met afbeeldingen + CTA's</p>
+          <article class="focus-card">
+            <div class="focus-card__icon"><img src="assets/icons/plane.svg" alt=""></div>
+            <h3>Reizen</h3>
+            <p>Nieuwe plekken zorgen voor nieuwe inspiratie.</p>
+            <p>Ik neem je mee tijdens mijn vakanties en laat zien wat mij opvalt, welke plekken indruk maken en welke herinneringen ik mee naar huis neem.</p>
+            <a href="#kreta-2026">Bekijk mijn reisvideo's</a>
           </article>
+          <article class="focus-card">
+            <div class="focus-card__icon"><img src="assets/icons/shirt.svg" alt=""></div>
+            <h3>Mijn kledingmerk</h3>
+            <p>Al meer dan tien jaar ontwerp en ontwikkel ik mijn eigen kledingmerk.</p>
+            <p>Van ontwerp tot webshop. Van idee tot eindproduct. Alles bouw ik zelf.</p>
+            <a href="blog/kledingmerk-achter-de-schermen.html">Lees het verhaal</a>
+          </article>
+          <article class="focus-card">
+            <div class="focus-card__icon"><img src="assets/icons/sparkles.svg" alt=""></div>
+            <h3>AI &amp; experimenten</h3>
+            <p>Nieuwe technologie fascineert mij.</p>
+            <p>Ik test AI-tools, bouw kleine projecten en kijk hoe technologie creativiteit kan versterken.</p>
+            <a href="blog/nieuwste-project.html">Bekijk projecten</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gear-section" id="gear" aria-labelledby="gear-title">
+        <div class="section__heading section__heading--inline">
+          <div>
+            <p class="eyebrow">Wat ik gebruik</p>
+            <h2 id="gear-title">Mijn favoriete tools en gear</h2>
+          </div>
+          <p class="section-note">Links kun je later vervangen door je eigen product- of partnerlinks.</p>
+        </div>
+        <div class="gear-grid">
+          <article class="gear-card">
+            <div class="gear-card__icon"><img src="assets/icons/coffee.svg" alt=""></div>
+            <span>Koffie</span>
+            <h3>Sage Barista Express</h3>
+            <p>De espressomachine waarmee ik dagelijks oefen, test en mijn koffievideo's maak.</p>
+            <a href="#" target="_blank" rel="noreferrer">Bekijk product</a>
+          </article>
+          <article class="gear-card">
+            <div class="gear-card__icon"><img src="assets/icons/coffee.svg" alt=""></div>
+            <span>Koffie</span>
+            <h3>Portafilter</h3>
+            <p>Voor consistenter werken aan dosering, verdeling en extractie tijdens mijn espresso-routine.</p>
+            <a href="#" target="_blank" rel="noreferrer">Bekijk product</a>
+          </article>
+          <article class="gear-card">
+            <div class="gear-card__icon"><img src="assets/icons/camera.svg" alt=""></div>
+            <span>Video</span>
+            <h3>Camera setup</h3>
+            <p>De camera en accessoires waarmee ik koffie, reizen en kleine momenten vastleg.</p>
+            <a href="#" target="_blank" rel="noreferrer">Bekijk gear</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section videos-section" id="videos" aria-labelledby="videos-title">
+        <div class="section__heading">
+          <p class="eyebrow">Laatste video's</p>
+          <h2 id="videos-title">Nieuw en veelbekeken</h2>
+          <p class="section-intro">Hier komt straks automatisch een overzicht van mijn nieuwste content. Nu vind je alvast mijn koffie-Reels en de eerste Kreta 2026 video.</p>
+        </div>
+
+        <div class="video-group" id="koffie-reels">
+          <div class="section__heading section__heading--inline">
+            <div>
+              <p class="eyebrow">Instagram</p>
+              <h3>Meest bekeken koffie Reels</h3>
+            </div>
+            <a class="text-link" href="https://www.instagram.com/nickkasmo/" target="_blank" rel="noreferrer">
+              Volg @nickkasmo
+              <img src="assets/icons/arrow-up-right.svg" alt="">
+            </a>
+          </div>
+          <div class="reels-grid">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/Daetz-goewV/" data-instgrm-version="14">
+              <a href="https://www.instagram.com/nickkasmo/reel/Daetz-goewV/">Bekijk deze Reel op Instagram</a>
+            </blockquote>
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DaczI57okR5/" data-instgrm-version="14">
+              <a href="https://www.instagram.com/nickkasmo/reel/DaczI57okR5/">Bekijk deze Reel op Instagram</a>
+            </blockquote>
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DaXG7JaI4E_/" data-instgrm-version="14">
+              <a href="https://www.instagram.com/nickkasmo/reel/DaXG7JaI4E_/">Bekijk deze Reel op Instagram</a>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="video-group" id="kreta-2026">
+          <div class="section__heading section__heading--inline">
+            <div>
+              <p class="eyebrow">Vakantie</p>
+              <h3>Kreta 2026</h3>
+            </div>
+            <a class="text-link" href="https://www.instagram.com/reel/DadtyVHIi8J/" target="_blank" rel="noreferrer">
+              Bekijk op Instagram
+              <img src="assets/icons/arrow-up-right.svg" alt="">
+            </a>
+          </div>
+          <div class="reels-grid">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DadtyVHIi8J/" data-instgrm-version="14">
+              <a href="https://www.instagram.com/nickkasmo/reel/DadtyVHIi8J/">Bekijk deze Reel op Instagram</a>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section latest-section" id="blogs" aria-labelledby="blogs-title">
+        <div class="section__heading">
+          <p class="eyebrow">Laatste blogs</p>
+          <h2 id="blogs-title">Verhalen achter het maken</h2>
+        </div>
+        <div class="latest-grid">
+          <article class="latest-card">
+            <span>01</span>
+            <h3>Wat ik deze week heb geleerd</h3>
+            <p>Korte notities over espresso, content maken, AI en alles wat onderweg blijft hangen.</p>
+            <a href="blog/espresso-leren.html">Lees artikel</a>
+          </article>
+          <article class="latest-card">
+            <span>02</span>
+            <h3>Mijn nieuwste project</h3>
+            <p>Een plek voor de experimenten waar ik aan bouw, van kleine tools tot grotere ideeën.</p>
+            <a href="blog/nieuwste-project.html">Lees artikel</a>
+          </article>
+          <article class="latest-card">
+            <span>03</span>
+            <h3>Achter de schermen van mijn kledingmerk</h3>
+            <p>Over ontwerpkeuzes, webshopwerk, productie, fouten en dingen die ik zelf uitzoek.</p>
+            <a href="blog/kledingmerk-achter-de-schermen.html">Lees artikel</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="quote philosophy" aria-labelledby="philosophy-title">
+        <p class="eyebrow">Mijn filosofie</p>
+        <h2 id="philosophy-title">Je hoeft niet te wachten tot je ergens goed in bent.</h2>
+        <div class="prose-block">
+          <p>Je leert door te doen.</p>
+          <p>Daarom laat ik niet alleen de mooie momenten zien, maar ook de experimenten, de fouten en alles wat daartussen zit.</p>
+          <p>Misschien herken je jezelf daarin. En misschien krijg je daardoor net dat zetje om zelf ook iets te maken.</p>
+        </div>
+      </section>
+
+      <section class="follow-section" id="volg" aria-labelledby="follow-title">
+        <div>
+          <p class="eyebrow">Volg mijn reis</p>
+          <h2 id="follow-title">Benieuwd waar ik nu mee bezig ben?</h2>
+          <p>Je vindt me hier, of kijk gewoon regelmatig op NickKasmo.nl. Er staat altijd wel iets nieuws.</p>
+        </div>
+        <div class="follow-links">
+          <a href="#"><img src="assets/icons/youtube.svg" alt="">YouTube</a>
+          <a href="https://www.instagram.com/nickkasmo/" target="_blank" rel="noreferrer"><img src="assets/icons/instagram.svg" alt="">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">Threads</a>
+          <a href="#">LinkedIn</a>
         </div>
       </section>
     </main>
 
-    <footer class="home-footer">
-      <div class="home-footer__inner">
-        <h2>Verbindingen &amp; contact</h2>
-        <div class="home-socials">
-          <a href="https://www.instagram.com/nickkasmo/" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="#">Twitter/X</a>
-          <a href="mailto:hallo@nickkasmo.nl">Email</a>
-          <a href="#">LinkedIn</a>
-        </div>
-        <div class="footer-links">
-          <a href="#newsletter-title">Inschrijven op nieuwsbrief</a>
-          <a href="#">Privacy · Gebruiksvoorwaarden</a>
-        </div>
-        <p>&copy; <span id="year"></span> Nick Kasmo. Alle essays en experimenten hier gedeeld.<br>Het leven van een maker.</p>
+    <footer class="site-footer">
+      <a class="footer-mark" href="#top" aria-label="Naar boven">
+        <img src="assets/brand/icon.svg" alt="">
+      </a>
+      <p>&copy; <span id="year"></span> NickKasmo.nl</p>
+      <div class="socials" aria-label="Social links">
+        <a href="https://www.instagram.com/nickkasmo/" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+        <a href="#" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt=""></a>
+        <a href="mailto:hallo@nickkasmo.nl" aria-label="Mail"><img src="assets/icons/mail.svg" alt=""></a>
       </div>
     </footer>
 
     <script src="script.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
   </body>
 </html>

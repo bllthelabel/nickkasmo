@@ -32,26 +32,6 @@ if (siteHeader && menuToggle && siteNav) {
   });
 }
 
-const filterPills = document.querySelectorAll(".filter-pill");
-const articleCards = document.querySelectorAll(".article-card[data-pillar]");
-
-if (filterPills.length && articleCards.length) {
-  filterPills.forEach((pill) => {
-    pill.addEventListener("click", () => {
-      const filter = pill.dataset.filter;
-
-      filterPills.forEach((item) => {
-        item.classList.toggle("is-active", item === pill);
-      });
-
-      articleCards.forEach((card) => {
-        const isVisible = filter === "all" || card.dataset.pillar === filter;
-        card.classList.toggle("is-hidden", !isVisible);
-      });
-    });
-  });
-}
-
 const newsletterForm = document.querySelector(".newsletter-form");
 
 if (newsletterForm) {
