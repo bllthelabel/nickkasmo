@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Verhalen van NickKasmo.nl over maken, meemaken, doormaken, leren en doorgaan.">
+    <meta name="description" content="Alle blogcategorieen en artikelen van NickKasmo.nl over maken, meemaken, doormaken, leren en doorgaan.">
     <meta name="theme-color" content="#f4eee6">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://nickkasmo.nl/blog/">
     <meta property="og:locale" content="nl_NL">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NickKasmo.nl">
-    <meta property="og:title" content="Blog - NickKasmo.nl">
-    <meta property="og:description" content="Eerlijke verhalen over maken, meemaken, doormaken, leren en doorgaan.">
+    <meta property="og:title" content="Blog categorieen en artikelen - NickKasmo.nl">
+    <meta property="og:description" content="Ontdek alle pijlers en artikelen over wat Nick maakt, meemaakt en doormaakt.">
     <meta property="og:url" content="https://nickkasmo.nl/blog/">
     <meta property="og:image" content="https://nickkasmo.nl/assets/nickkasmo.nl%20logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog - NickKasmo.nl">
-    <meta name="twitter:description" content="Eerlijke verhalen over maken, meemaken, doormaken, leren en doorgaan.">
+    <meta name="twitter:title" content="Blog categorieen en artikelen - NickKasmo.nl">
+    <meta name="twitter:description" content="Ontdek alle pijlers en artikelen over wat Nick maakt, meemaakt en doormaakt.">
     <meta name="twitter:image" content="https://nickkasmo.nl/assets/nickkasmo.nl%20logo.png">
-    <title>Blog - NickKasmo.nl</title>
+    <title>Blog categorieen en artikelen - NickKasmo.nl</title>
     <link rel="icon" href="../assets/brand/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../styles.css">
   </head>
@@ -34,21 +34,55 @@
         <span class="visually-hidden">Menu</span>
       </button>
       <nav class="nav" id="site-nav" aria-label="Hoofdnavigatie">
-        <a href="../index.html#wie-is-nick">Wie is Nick?</a>
-        <a href="../index.html#gear">Gear</a>
-        <a href="../index.html#videos">Video's</a>
+        <a href="../index.html">Home</a>
         <a href="index.html">Blog</a>
+        <a href="../index.html#videos">Video's</a>
+        <a href="../index.html#wie-is-nick">Over mij</a>
       </nav>
     </header>
 
     <main>
       <section class="blog-hero">
         <p class="eyebrow">Blog</p>
-        <h1>Verhalen achter het maken.</h1>
-        <p>Geen perfecte plaatjes, maar notities over wat ik maak, meemaak en doormaak.</p>
+        <h1>Alle verhalen, per pijler.</h1>
+        <p>Begin bij een categorie of duik direct in de nieuwste artikelen over maken, meemaken en doormaken.</p>
       </section>
 
-      <section class="section blog-list" aria-label="Alle blogs">
+      <section class="section category-overview" aria-labelledby="categories-title">
+        <div class="section__heading section__heading--inline">
+          <div>
+            <p class="eyebrow">Categorieen</p>
+            <h2 id="categories-title">Verken per pijler</h2>
+          </div>
+        </div>
+        <div class="category-grid">
+          <article class="category-card">
+            <span>01</span>
+            <h3>Wat ik maak</h3>
+            <p>Projecten, AI-tools, kleding, websites, video en alles wat van idee naar vorm beweegt.</p>
+            <a href="wat-ik-maak/">Bekijk categorie</a>
+          </article>
+          <article class="category-card">
+            <span>02</span>
+            <h3>Wat ik meemaak</h3>
+            <p>Reizen, koffie, plekken, producten en ervaringen die mijn werk en blik voeden.</p>
+            <a href="wat-ik-meemaak/">Bekijk categorie</a>
+          </article>
+          <article class="category-card">
+            <span>03</span>
+            <h3>Wat ik doormaak</h3>
+            <p>Lessen, twijfels, fouten en processen achter het maken. Het werk achter het werk.</p>
+            <a href="wat-ik-doormaak/">Bekijk categorie</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section blog-list-section" aria-labelledby="all-posts-title">
+        <div class="section__heading">
+          <p class="eyebrow">Alle artikelen</p>
+          <h2 id="all-posts-title">Recent gepubliceerd</h2>
+        </div>
+        <div class="blog-list">
         <article class="blog-list-card">
           <span>Wat ik doormaak</span>
           <h2>Wat espresso mij leert over opnieuw proberen</h2>
@@ -67,21 +101,36 @@
           <p>Over ontwerp, webshopwerk, keuzes maken en al meer dan tien jaar zelf blijven bouwen.</p>
           <a href="kledingmerk-achter-de-schermen.html">Lees artikel</a>
         </article>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <a class="footer-mark" href="../index.html" aria-label="Naar home">
-        <img src="../assets/brand/icon.svg" alt="">
+        <img src="../assets/brand/logo.svg" alt="NickKasmo.nl">
       </a>
       <p>&copy; <span id="year"></span> NickKasmo.nl</p>
       <div class="socials" aria-label="Social links">
         <a href="https://www.instagram.com/nickkasmo/" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="../assets/icons/instagram.svg" alt=""></a>
         <a href="#" aria-label="YouTube"><img src="../assets/icons/youtube.svg" alt=""></a>
-        <a href="mailto:hallo@nickkasmo.nl" aria-label="Mail"><img src="../assets/icons/mail.svg" alt=""></a>
+        <a href="#" aria-label="LinkedIn"><img src="../assets/icons/linkedin.svg?v=2a9861b" alt=""></a>
       </div>
     </footer>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Blog categorieen en artikelen - NickKasmo.nl",
+        "description": "Alle blogcategorieen en artikelen van NickKasmo.nl over maken, meemaken en doormaken.",
+        "url": "https://nickkasmo.nl/blog/",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "NickKasmo.nl",
+          "url": "https://nickkasmo.nl/"
+        }
+      }
+    </script>
     <script src="../script.js"></script>
   </body>
 </html>

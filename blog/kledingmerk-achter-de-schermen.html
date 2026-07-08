@@ -35,18 +35,22 @@
         <span class="visually-hidden">Menu</span>
       </button>
       <nav class="nav" id="site-nav" aria-label="Hoofdnavigatie">
-        <a href="../index.html#bezig">Nu bezig</a>
-        <a href="../index.html#gear">Gear</a>
+        <a href="../index.html">Home</a>
         <a href="index.html">Blog</a>
+        <a href="../index.html#videos">Video's</a>
+        <a href="../index.html#wie-is-nick">Over mij</a>
       </nav>
     </header>
 
     <main>
       <article class="article">
-        <a class="back-link" href="index.html">Terug naar blog</a>
+        <a class="back-link" href="wat-ik-maak/">Wat ik maak</a>
         <p class="eyebrow">Wat ik maak</p>
         <h1>Achter de schermen van mijn kledingmerk</h1>
         <p class="article-meta">Kleding · Case study · 5 min lezen</p>
+        <div class="article-summary">
+          <p>Mijn kledingmerk is geen rechte lijn, maar een lang proces van ontwerpen, testen, kiezen en opnieuw beginnen. Juist de stappen achter het eindproduct maken het interessant.</p>
+        </div>
         <div class="article-body">
           <p>Al meer dan tien jaar bouw ik aan mijn eigen kledingmerk. Dat klinkt misschien als een rechte lijn, maar in de praktijk is het vooral veel proberen, aanpassen en opnieuw beginnen.</p>
           <p>Ik hou van het hele proces. Niet alleen het eindproduct, maar ook de keuzes ervoor: welk materiaal, welke pasvorm, welke foto, welke tekst op de webshop.</p>
@@ -60,16 +64,47 @@
 
     <footer class="site-footer">
       <a class="footer-mark" href="../index.html" aria-label="Naar home">
-        <img src="../assets/brand/icon.svg" alt="">
+        <img src="../assets/brand/logo.svg" alt="NickKasmo.nl">
       </a>
       <p>&copy; <span id="year"></span> NickKasmo.nl</p>
       <div class="socials" aria-label="Social links">
         <a href="https://www.instagram.com/nickkasmo/" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="../assets/icons/instagram.svg" alt=""></a>
         <a href="#" aria-label="YouTube"><img src="../assets/icons/youtube.svg" alt=""></a>
-        <a href="mailto:hallo@nickkasmo.nl" aria-label="Mail"><img src="../assets/icons/mail.svg" alt=""></a>
+        <a href="#" aria-label="LinkedIn"><img src="../assets/icons/linkedin.svg?v=2a9861b" alt=""></a>
       </div>
     </footer>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Achter de schermen van mijn kledingmerk",
+        "description": "Over ontwerp, webshopwerk, keuzes maken en al meer dan tien jaar zelf blijven bouwen.",
+        "datePublished": "2026-07-08",
+        "dateModified": "2026-07-08",
+        "author": {
+          "@type": "Person",
+          "name": "Nick Kasmo",
+          "url": "https://nickkasmo.nl/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "NickKasmo.nl",
+          "url": "https://nickkasmo.nl/"
+        },
+        "mainEntityOfPage": "https://nickkasmo.nl/blog/kledingmerk-achter-de-schermen.html",
+        "articleSection": "Wat ik maak",
+        "keywords": ["Kleding", "Case study", "Merk bouwen", "Design"],
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Blog", "item": "https://nickkasmo.nl/blog/" },
+            { "@type": "ListItem", "position": 2, "name": "Wat ik maak", "item": "https://nickkasmo.nl/blog/wat-ik-maak/" },
+            { "@type": "ListItem", "position": 3, "name": "Achter de schermen van mijn kledingmerk", "item": "https://nickkasmo.nl/blog/kledingmerk-achter-de-schermen.html" }
+          ]
+        }
+      }
+    </script>
     <script src="../script.js"></script>
   </body>
 </html>
