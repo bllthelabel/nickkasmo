@@ -119,22 +119,59 @@ if (itemFilterPills.length && itemRows.length) {
   });
 }
 
+const projectFilterPills = document.querySelectorAll(".project-filter-pill");
+const projectCards = document.querySelectorAll("[data-project-tags]");
+const projectCount = document.querySelector("[data-project-count]");
+
+if (projectFilterPills.length && projectCards.length) {
+  const activateProjectFilter = (filter) => {
+    const activeFilter = filter || "all";
+    let visibleCount = 0;
+
+    projectFilterPills.forEach((item) => {
+      const isActive = item.dataset.projectFilter === activeFilter;
+      item.classList.toggle("button--primary", isActive);
+      item.classList.toggle("button--secondary", !isActive);
+    });
+
+    projectCards.forEach((item) => {
+      const tags = (item.dataset.projectTags || "").split(" ");
+      const isVisible = activeFilter === "all" || tags.includes(activeFilter);
+      item.hidden = !isVisible;
+      visibleCount += isVisible ? 1 : 0;
+    });
+
+    if (projectCount) {
+      projectCount.textContent = visibleCount;
+    }
+  };
+
+  projectFilterPills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      activateProjectFilter(pill.dataset.projectFilter);
+    });
+  });
+}
+
 const contactModal = document.querySelector("[data-contact-modal]");
-const contactOpen = document.querySelector("[data-contact-open]");
+const contactOpenButtons = document.querySelectorAll("[data-contact-open]");
 const contactCloseButtons = document.querySelectorAll("[data-contact-close]");
 const newsletterModal = document.querySelector("[data-newsletter-modal]");
 const newsletterOpenButtons = document.querySelectorAll("[data-newsletter-open]");
 const newsletterCloseButtons = document.querySelectorAll("[data-newsletter-close]");
 let lastModalTrigger = null;
 
-if (contactModal && contactOpen) {
+if (contactModal && contactOpenButtons.length) {
   const closeContactModal = () => {
     contactModal.hidden = true;
-    contactOpen.focus();
+
+    if (lastModalTrigger) {
+      lastModalTrigger.focus();
+    }
   };
 
-  const openContactModal = () => {
-    lastModalTrigger = contactOpen;
+  const openContactModal = (trigger) => {
+    lastModalTrigger = trigger;
     contactModal.hidden = false;
     const firstInput = contactModal.querySelector("#contact-name");
 
@@ -143,7 +180,11 @@ if (contactModal && contactOpen) {
     }
   };
 
-  contactOpen.addEventListener("click", openContactModal);
+  contactOpenButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      openContactModal(button);
+    });
+  });
 
   contactCloseButtons.forEach((button) => {
     button.addEventListener("click", closeContactModal);

@@ -883,8 +883,167 @@ a.item-card__action:hover {
   background: var(--surface-card);
 }
 
+.item-row[hidden],
+.project-card[hidden] {
+  display: none;
+}
+
 .item-row__media {
   min-height: 100%;
+}
+
+.portfolio-hero {
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 96px var(--gutter) 56px;
+}
+
+.portfolio-hero h1 {
+  max-width: 930px;
+}
+
+.portfolio-hero p:not(.eyebrow) {
+  max-width: 760px;
+  color: var(--text-secondary);
+  font-size: 21px;
+  line-height: 1.7;
+}
+
+.portfolio-hero .button {
+  margin-top: 16px;
+}
+
+.portfolio-count {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  display: grid;
+  overflow: hidden;
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.project-card--featured {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+}
+
+.project-card__visual {
+  display: grid;
+  min-height: 260px;
+  place-items: center;
+  align-content: center;
+  gap: 18px;
+  background: linear-gradient(135deg, var(--paper-50), var(--paper-200));
+  border-bottom: 1px solid var(--border-default);
+}
+
+.project-card--featured .project-card__visual {
+  min-height: 100%;
+  border-right: 1px solid var(--border-default);
+  border-bottom: 0;
+}
+
+.project-card__visual img {
+  width: 68px;
+  height: 68px;
+  padding: 16px;
+  background: rgba(251, 248, 244, 0.84);
+  border: 1px solid var(--border-default);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+.project-card__visual span,
+.project-card__meta,
+.project-card__status {
+  color: var(--clay-600);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.project-card__content {
+  display: flex;
+  min-height: 330px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+}
+
+.project-card__content h3 {
+  margin: 8px 0 12px;
+  font-family: var(--font-display);
+  font-size: 2rem;
+}
+
+.project-card__content > p:not(.project-card__meta) {
+  color: var(--text-secondary);
+}
+
+.project-card__content .text-link,
+.project-card__status {
+  margin-top: auto;
+}
+
+.project-details {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  margin: 20px 0 28px;
+}
+
+.project-details div {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 16px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-default);
+}
+
+.project-details dt {
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.project-details dd {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.portfolio-contact {
+  display: grid;
+  max-width: var(--content-wide);
+  margin: 48px auto 96px;
+  padding: 56px var(--gutter);
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 48px;
+  background: var(--ink-900);
+  color: var(--paper-50);
+}
+
+.portfolio-contact h2 {
+  max-width: 760px;
+  color: inherit;
+}
+
+.portfolio-contact p:not(.eyebrow) {
+  color: var(--paper-300);
 }
 
 .videos-section {
@@ -1825,6 +1984,17 @@ a.item-card__action:hover {
   .reels-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .project-card--featured,
+  .portfolio-contact {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card--featured .project-card__visual {
+    min-height: 280px;
+    border-right: 0;
+    border-bottom: 1px solid var(--border-default);
+  }
 }
 
 @media (max-width: 680px) {
@@ -2017,6 +2187,30 @@ a.item-card__action:hover {
 
   .item-row__media {
     min-height: 180px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card--featured {
+    grid-column: auto;
+  }
+
+  .project-card__content {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .portfolio-contact {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 36px 24px;
+  }
+
+  .project-details div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .newsletter,
