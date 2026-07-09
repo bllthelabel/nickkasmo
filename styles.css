@@ -871,18 +871,18 @@ a.item-card__action:hover {
 
 .item-list {
   display: grid;
-  gap: 1px;
-  overflow: hidden;
-  background: var(--border-default);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-xl);
+  gap: 24px;
 }
 
 .item-row {
   display: grid;
   grid-template-columns: minmax(190px, 280px) minmax(0, 1fr);
   min-height: 280px;
+  overflow: hidden;
   background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
 }
 
 .item-row[hidden],
@@ -924,19 +924,19 @@ a.item-card__action:hover {
 
 .portfolio-grid {
   display: grid;
-  gap: 1px;
-  overflow: hidden;
-  background: var(--border-default);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-xl);
+  gap: 32px;
 }
 
 .project-card {
   display: grid;
   grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
   min-height: 330px;
+  overflow: hidden;
   background: var(--surface-card);
-  transition: background-color 180ms ease;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .project-card--featured {
@@ -946,6 +946,8 @@ a.item-card__action:hover {
 
 .project-card:hover {
   background: var(--paper-50);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .project-card__visual {
@@ -1612,17 +1614,16 @@ a.item-card__action:hover {
 .pillar-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--border-default);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+  gap: 24px;
 }
 
 .pillar-list div {
   min-height: 260px;
   padding: 28px;
   background: var(--paper-50);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .pillar-list span {
@@ -2229,6 +2230,7 @@ a.item-card__action:hover {
 
   .portfolio-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .project-card,
