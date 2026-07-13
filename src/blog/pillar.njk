@@ -1,0 +1,54 @@
+---
+layout: base.njk
+pagination:
+  data: pillars.list
+  size: 1
+  alias: currentPillar
+permalink: "blog/{{ currentPillar.slug }}/index.html"
+eleventyComputed:
+  title: "{{ currentPillar.title }} - NickKasmo.nl"
+  ogTitle: "{{ currentPillar.title }} - NickKasmo.nl"
+  canonical: "/blog/{{ currentPillar.slug }}/"
+  metaDescription: "{{ currentPillar.metaDescription }}"
+  ogDescription: "{{ currentPillar.metaSummary }}"
+  jsonLd:
+    "@context": "https://schema.org"
+    "@type": "CollectionPage"
+    name: "{{ currentPillar.title }} - NickKasmo.nl"
+    url: "https://nickkasmo.nl/blog/{{ currentPillar.slug }}/"
+---
+<section class="blog-hero">
+  <a class="back-link" href="/blog/">Terug naar alle categorieën</a>
+  <p class="eyebrow">Categorie</p>
+  <h1>{{ currentPillar.heroTitle }}</h1>
+  <p>{{ currentPillar.heroDescription }}</p>
+</section>
+
+<section class="section blog-list-section" aria-labelledby="posts-title">
+  <div class="section__heading">
+    <p class="eyebrow">Artikelen</p>
+    <h2 id="posts-title">Binnen deze pijler</h2>
+  </div>
+  {% set pillarPosts = collections.posts | wherePillar(currentPillar.slug) %}
+  {% if pillarPosts.length %}
+  <div class="blog-list">
+    {%- for post in pillarPosts %}
+    <article class="post-card" data-pillar="{{ currentPillar.title }}">
+      <span>{{ post.data.date | dutchDate }}</span>
+      <h3>{{ post.data.title }}</h3>
+      <p>{{ post.data.excerpt }}</p>
+      <a href="{{ post.url }}">Lees artikel</a>
+    </article>
+    {%- endfor %}
+  </div>
+  {% else %}
+  <div class="blog-list">
+    <article class="latest-card">
+      <span>{{ currentPillar.title }}</span>
+      <h3>0 artikelen geplaatst</h3>
+      <p>Zodra ik hier iets publiceer, verschijnt het in dit overzicht.</p>
+      <button type="button" data-newsletter-open>Ontvang de eerste update</button>
+    </article>
+  </div>
+  {% endif %}
+</section>

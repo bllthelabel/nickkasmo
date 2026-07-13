@@ -1,0 +1,17 @@
+{
+  "url": "https://nickkasmo.nl",
+  "ogImage": "https://nickkasmo.nl/assets/nickkasmo.nl%20logo.png",
+  "nav": [
+    { "label": "Blog", "href": "/blog/" },
+    { "label": "Portfolio", "href": "/portfolio/" },
+    { "label": "Items", "href": "/items/" },
+    { "label": "Video's", "href": "/#videos" },
+    { "label": "Nieuwsbrief", "href": "/#nieuwsbrief", "newsletter": true },
+    { "label": "Over mij", "href": "/#wie-is-nick" }
+  ],
+  "socials": [
+    { "label": "Instagram", "href": "https://www.instagram.com/nickkasmo/", "icon": "instagram" },
+    { "label": "YouTube", "href": "https://www.youtube.com/@nickkasmo", "icon": "youtube" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/nick-kasmo-347573a3/", "icon": "linkedin", "iconVersion": "2a9861b" }
+  ]
+}
