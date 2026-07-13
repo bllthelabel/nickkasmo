@@ -3,7 +3,7 @@ title: AI & creatieve tools
 featured: false
 number: "02"
 icon: sparkles
-visualBadge: Wordt aangevuld
+visualBadge: Work in progress
 statusText: Cases volgen
 projectTags:
   - ai
