@@ -6,8 +6,12 @@
 //   GITHUB_CLIENT_SECRET   (add as "Secret", not plain text)
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, rawEnv) {
     const url = new URL(request.url);
+    const env = {
+      GITHUB_CLIENT_ID: (rawEnv.GITHUB_CLIENT_ID || "").trim(),
+      GITHUB_CLIENT_SECRET: (rawEnv.GITHUB_CLIENT_SECRET || "").trim(),
+    };
 
     if (url.pathname === "/auth") {
       return handleAuth(url, env);
