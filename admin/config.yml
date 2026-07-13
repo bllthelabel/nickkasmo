@@ -36,8 +36,6 @@ collections:
     create: true
     slug: "{{slug}}"
     format: "frontmatter"
-    filter:
-      field: "title"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - label: "Icoon"
