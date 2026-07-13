@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: Blog categorieën - NickKasmo.nl
+canonical: /blog/
+ogTitle: Blog categorieën - NickKasmo.nl
+eleventyComputed:
+  metaDescription: "Alle blogcategorieën van NickKasmo.nl over maken, meemaken, doormaken, leren en doorgaan. Er zijn momenteel {{ collections.posts.length }} artikelen geplaatst."
+jsonLd:
+  "@context": "https://schema.org"
+  "@type": "CollectionPage"
+  name: "Blog categorieën - NickKasmo.nl"
+  url: "https://nickkasmo.nl/blog/"
+---
+<section class="blog-hero">
+  <p class="eyebrow">Blog</p>
+  <h1>Blogcategorieën.</h1>
+  <p>{{ collections.posts.length }} artikelen geplaatst. Zodra ik zelf iets publiceer, verschijnt het binnen een van deze pijlers.</p>
+</section>
+
+<section class="section category-overview" aria-labelledby="categories-title">
+  <div class="section__heading section__heading--inline">
+    <div>
+      <p class="eyebrow">{{ collections.posts.length }} artikelen geplaatst</p>
+      <h2 id="categories-title">Verken per pijler</h2>
+    </div>
+  </div>
+  <div class="category-grid">
+    {%- for pillar in pillars.list %}
+    {% set pillarPosts = collections.posts | wherePillar(pillar.slug) %}
+    <article class="category-card">
+      <span>0{{ loop.index }}</span>
+      <h3>{{ pillar.title }}</h3>
+      <p>{{ pillar.categoryDescription }} {{ pillarPosts.length }} artikelen.</p>
+      <a href="/blog/{{ pillar.slug }}/">Bekijk categorie</a>
+    </article>
+    {%- endfor %}
+  </div>
+</section>

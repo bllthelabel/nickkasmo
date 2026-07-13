@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+      "slug": "wat-ik-maak",
+      "title": "Wat ik maak",
+      "shortDescription": "Projecten, tools en ideeën die werkelijkheid worden.",
+      "categoryDescription": "Projecten, AI-tools, kleding, websites, video en alles wat van idee naar vorm beweegt.",
+      "heroTitle": "Wat ik maak.",
+      "heroDescription": "Projecten, AI-tools, kleding, websites, video en alle ideeën die onderweg vorm krijgen.",
+      "metaDescription": "Artikelen van NickKasmo.nl over wat Nick maakt: AI-tools, kleding, websites, video en creatieve projecten.",
+      "metaSummary": "Projecten, tools, kleding en ideeën die langzaam werkelijkheid worden."
+    },
+    {
+      "slug": "wat-ik-meemaak",
+      "title": "Wat ik meemaak",
+      "shortDescription": "Ervaringen, plekken, smaken en dingen die mijn werk voeden.",
+      "categoryDescription": "Reizen, koffie, plekken, producten en ervaringen die mijn werk en blik voeden.",
+      "heroTitle": "Wat ik meemaak.",
+      "heroDescription": "Reizen, koffie, plekken, producten en ervaringen die mijn werk en blik voeden.",
+      "metaDescription": "Artikelen van NickKasmo.nl over wat Nick meemaakt: reizen, koffie, plekken en ervaringen.",
+      "metaSummary": "Reizen, espresso, eten, fotografie en producten die inspiratie voeden."
+    },
+    {
+      "slug": "wat-ik-doormaak",
+      "title": "Wat ik doormaak",
+      "shortDescription": "De lessen, twijfels en fouten achter het maken.",
+      "categoryDescription": "Lessen, twijfels, fouten en processen achter het maken. Het werk achter het werk.",
+      "heroTitle": "Wat ik doormaak.",
+      "heroDescription": "Lessen, twijfels, fouten en processen achter het maken. Het werk achter het werk.",
+      "metaDescription": "Artikelen van NickKasmo.nl over wat Nick doormaakt: lessen, twijfels en het proces achter het maken.",
+      "metaSummary": "Processen, lessen, mislukkingen, twijfels en keuzes."
+    }
+  ]
+}

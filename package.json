@@ -1,0 +1,23 @@
+{
+  "name": "nickkasmo.nl",
+  "version": "1.0.0",
+  "description": "Statische website voor `nickkasmo.nl`, gehost via GitHub Pages.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bllthelabel/nickkasmo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bllthelabel/nickkasmo/issues"
+  },
+  "homepage": "https://github.com/bllthelabel/nickkasmo#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

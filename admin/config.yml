@@ -1,0 +1,172 @@
+backend:
+  name: github
+  repo: bllthelabel/nickkasmo
+  branch: main
+  base_url: https://nickkasmo-cms-auth.wandering-brook-36b4.workers.dev
+  auth_endpoint: auth
+
+publish_mode: simple
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "posts"
+    label: "Blogposts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - label: "Pijler"
+        name: "pillar"
+        widget: "select"
+        options:
+          - { label: "Wat ik maak", value: "wat-ik-maak" }
+          - { label: "Wat ik meemaak", value: "wat-ik-meemaak" }
+          - { label: "Wat ik doormaak", value: "wat-ik-doormaak" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Samenvatting", name: "excerpt", widget: "text" }
+      - { label: "Concept (niet live tonen)", name: "draft", widget: "boolean", default: true }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
+
+  - name: "items"
+    label: "Items die ik gebruik"
+    folder: "src/items"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    filter:
+      field: "title"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - label: "Icoon"
+        name: "icon"
+        widget: "select"
+        options: ["coffee", "camera", "video", "sparkles", "pencil-line", "shirt", "plane", "mail"]
+      - { label: "Tags", name: "itemTags", widget: "list" }
+      - { label: "Affiliate link", name: "affiliateLink", widget: "string", required: false, hint: "Leeg laten als er nog geen link is." }
+      - { label: "Volgorde", name: "order", widget: "number", default: 1 }
+      - { label: "Beschrijving", name: "body", widget: "markdown" }
+
+  - name: "portfolio"
+    label: "Portfolio-projecten"
+    folder: "src/portfolio"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Uitgelicht (grote kaart bovenaan)", name: "featured", widget: "boolean", default: false }
+      - { label: "Nummer", name: "number", widget: "string" }
+      - label: "Icoon"
+        name: "icon"
+        widget: "select"
+        options: ["coffee", "camera", "video", "sparkles", "pencil-line", "shirt", "plane", "mail"]
+      - { label: "Badge in beeld (bijv. 'Live project' of 'Wordt aangevuld')", name: "visualBadge", widget: "string" }
+      - { label: "Status-tekst (alleen niet-uitgelichte kaarten)", name: "statusText", widget: "string", required: false }
+      - { label: "Tags (voor filter)", name: "projectTags", widget: "list" }
+      - { label: "Chips (zichtbare labels)", name: "chips", widget: "list" }
+      - { label: "Meta (bijv. 'Eigen project · 2026')", name: "meta", widget: "string" }
+      - { label: "Rol (alleen uitgelicht)", name: "role", widget: "string", required: false }
+      - { label: "Gemaakt met (alleen uitgelicht)", name: "tools", widget: "string", required: false }
+      - { label: "Link label (alleen uitgelicht)", name: "linkLabel", widget: "string", required: false }
+      - { label: "Link href (alleen uitgelicht)", name: "linkHref", widget: "string", required: false }
+      - { label: "Volgorde", name: "order", widget: "number", default: 1 }
+      - { label: "Beschrijving", name: "body", widget: "markdown" }
+
+  - name: "videos"
+    label: "Video's / Reels"
+    folder: "src/videos"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Titel (intern, niet zichtbaar)", name: "title", widget: "string" }
+      - label: "Groep"
+        name: "group"
+        widget: "select"
+        options:
+          - { label: "Koffie Reels", value: "koffie-reels" }
+          - { label: "Kreta 2026", value: "kreta-2026" }
+      - { label: "Instagram permalink", name: "permalinkUrl", widget: "string" }
+      - { label: "Instagram profiel-link", name: "profileUrl", widget: "string" }
+      - { label: "Volgorde", name: "order", widget: "number", default: 1 }
+
+  - name: "pagina-teksten"
+    label: "Pagina-teksten"
+    files:
+      - file: "src/_data/home.json"
+        label: "Homepage"
+        name: "home"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Binnenkort op de blog"
+            name: "featured"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Meta", name: "meta", widget: "string" }
+              - { label: "Tekst", name: "text", widget: "text" }
+          - label: "Over mij"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - label: "Paragrafen"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraaf", name: "paragraph", widget: "text" }
+          - label: "Nieuwsbrief"
+            name: "newsletter"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Noot", name: "note", widget: "string" }
+          - label: "Filosofie"
+            name: "philosophy"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - label: "Paragrafen"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraaf", name: "paragraph", widget: "text" }
+          - label: "Volg mijn reis"
+            name: "follow"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Tekst", name: "text", widget: "text" }
+
+  - name: "blog-pijlers"
+    label: "Blog-pijlers"
+    files:
+      - file: "src/_data/pillars.json"
+        label: "Pijlers"
+        name: "pillars"
+        fields:
+          - label: "Pijlers"
+            name: "list"
+            widget: "list"
+            fields:
+              - { label: "Slug (niet wijzigen na publicatie!)", name: "slug", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Korte beschrijving (homepage)", name: "shortDescription", widget: "string" }
+              - { label: "Categorie-beschrijving (blogoverzicht)", name: "categoryDescription", widget: "text" }
+              - { label: "Hero-titel (pijlerpagina)", name: "heroTitle", widget: "string" }
+              - { label: "Hero-beschrijving (pijlerpagina)", name: "heroDescription", widget: "text" }
+              - { label: "Meta-omschrijving (SEO)", name: "metaDescription", widget: "text" }
+              - { label: "Meta-samenvatting (social share)", name: "metaSummary", widget: "text" }

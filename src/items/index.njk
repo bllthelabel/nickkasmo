@@ -1,0 +1,61 @@
+---
+layout: base.njk
+permalink: "items/index.html"
+eleventyExcludeFromCollections: true
+title: Items die ik gebruik - NickKasmo.nl
+canonical: /items/
+ogTitle: Items die ik gebruik - NickKasmo.nl
+metaDescription: "Items, producten en software die Nick Kasmo gebruikt, georganiseerd met tags zoals koffie, video, software, AI, reizen en dagelijks gebruik."
+ogDescription: "Een tag-gedreven overzicht van spullen, producten en software die terugkomen in mijn proces."
+filterTags: [koffie, video, software, ai, reizen, hardware]
+jsonLd:
+  "@context": "https://schema.org"
+  "@type": "CollectionPage"
+  name: "Items die ik gebruik - NickKasmo.nl"
+  url: "https://nickkasmo.nl/items/"
+---
+<section class="items-hero">
+  <p class="eyebrow">Items die ik gebruik</p>
+  <h1>Een overzicht van spullen, producten en software.</h1>
+  <p>Elk item kan meerdere tags hebben. Zo kan een camera tegelijk bij video, reizen, hardware en dagelijks gebruik horen.</p>
+  <p class="affiliate-note">Sommige links kunnen affiliate links zijn. Als je via zo'n link iets koopt, kan ik daar een kleine vergoeding voor krijgen. Jij betaalt niets extra.</p>
+</section>
+
+<section class="section items-section" aria-labelledby="items-overview-title">
+  <div class="section__heading section__heading--inline">
+    <div>
+      <p class="eyebrow">Overzicht</p>
+      <h2 id="items-overview-title">Alle items</h2>
+    </div>
+  </div>
+  <div class="filter-block" aria-labelledby="item-filter-title">
+    <h3 id="item-filter-title">Tags</h3>
+    <div class="filter-actions" aria-label="Filter items op tag">
+      <button class="button button--primary item-filter-pill" type="button" data-item-filter="all">Alles</button>
+      {%- for tag in filterTags %}
+      <button class="button button--secondary item-filter-pill" type="button" data-item-filter="{{ tag }}">{{ tag | capitalize }}</button>
+      {%- endfor %}
+    </div>
+  </div>
+  <div class="item-list">
+    {%- for item in collections.items | sortByOrder %}
+    <article class="item-row" data-tags="{{ item.data.itemTags | join(' ') }}">
+      <div class="item-row__media"><img src="/assets/icons/{{ item.data.icon }}.svg" alt=""></div>
+      <div class="item-row__content">
+        <div class="tag-list" aria-label="Tags">
+          {%- for tag in item.data.itemTags %}
+          <span>{{ tag | replace("-", " ") }}</span>
+          {%- endfor %}
+        </div>
+        <h3>{{ item.data.title }}</h3>
+        <p>{{ item.templateContent | safe }}</p>
+        {% if item.data.affiliateLink %}
+        <a class="item-card__action" href="{{ item.data.affiliateLink }}" target="_blank" rel="noreferrer sponsored">Bekijk affiliate link</a>
+        {% else %}
+        <button type="button" class="item-card__action" disabled>Affiliate link toevoegen</button>
+        {% endif %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>

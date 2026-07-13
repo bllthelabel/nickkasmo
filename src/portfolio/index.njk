@@ -1,0 +1,85 @@
+---
+layout: base.njk
+permalink: "portfolio/index.html"
+eleventyExcludeFromCollections: true
+title: Portfolio - NickKasmo.nl
+canonical: /portfolio/
+ogTitle: Portfolio - NickKasmo.nl
+metaDescription: "Bekijk het digitale werk van Nick Kasmo: websites, content, AI-experimenten en digitale merkervaringen."
+ogDescription: "Een groeiend overzicht van websites, content, AI-experimenten en digitale merkervaringen van Nick Kasmo."
+filterTags: [websites, ai, content, design]
+jsonLd:
+  "@context": "https://schema.org"
+  "@type": "CollectionPage"
+  name: "Portfolio - NickKasmo.nl"
+  url: "https://nickkasmo.nl/portfolio/"
+---
+<section class="portfolio-hero">
+  <p class="eyebrow">Portfolio</p>
+  <h1>Digitaal werk, gemaakt vanuit nieuwsgierigheid.</h1>
+  <p>Een groeiend overzicht van websites, content, AI-experimenten en digitale merkervaringen. Van eerste idee tot iets dat werkt, beweegt of online staat.</p>
+  <a class="button button--primary" href="#projecten">Bekijk mijn werk</a>
+</section>
+
+<section class="section portfolio-section" id="projecten" aria-labelledby="portfolio-title">
+  <div class="section__heading section__heading--inline">
+    <div>
+      <p class="eyebrow">Selectie</p>
+      <h2 id="portfolio-title">Projecten en experimenten</h2>
+    </div>
+    <p class="portfolio-count"><span data-project-count>{{ collections.portfolio.length }}</span> projecten zichtbaar</p>
+  </div>
+
+  <div class="filter-block" aria-labelledby="portfolio-filter-title">
+    <h3 id="portfolio-filter-title">Filter op discipline</h3>
+    <div class="filter-actions" aria-label="Filter portfolio op discipline">
+      <button class="button button--primary project-filter-pill" type="button" data-project-filter="all">Alles</button>
+      {%- for tag in filterTags %}
+      <button class="button button--secondary project-filter-pill" type="button" data-project-filter="{{ tag }}">{{ tag | capitalize }}</button>
+      {%- endfor %}
+    </div>
+  </div>
+
+  <div class="portfolio-grid">
+    {%- for project in collections.portfolio | sortByOrder %}
+    <article class="project-card{% if project.data.featured %} project-card--featured{% endif %}" data-project-tags="{{ project.data.projectTags | join(' ') }}">
+      <div class="project-card__visual{% if project.data.featured %} project-card__visual--site{% endif %}">
+        <strong class="project-card__number">{{ project.data.number }}</strong>
+        <img src="/assets/icons/{{ project.data.icon }}.svg" alt="">
+        <span>{{ project.data.visualBadge }}</span>
+      </div>
+      <div class="project-card__content">
+        <div class="tag-list" aria-label="Disciplines">
+          {%- for chip in project.data.chips %}
+          <span>{{ chip }}</span>
+          {%- endfor %}
+        </div>
+        <p class="project-card__meta">{{ project.data.meta }}</p>
+        <h3>{{ project.data.title }}</h3>
+        <p>{{ project.templateContent | safe }}</p>
+        {% if project.data.featured %}
+        <dl class="project-details">
+          <div><dt>Rol</dt><dd>{{ project.data.role }}</dd></div>
+          <div><dt>Gemaakt met</dt><dd>{{ project.data.tools }}</dd></div>
+        </dl>
+        <a class="text-link" href="{{ project.data.linkHref }}">
+          {{ project.data.linkLabel }}
+          <img src="/assets/icons/arrow-up-right.svg" alt="">
+        </a>
+        {% else %}
+        <span class="project-card__status">{{ project.data.statusText }}</span>
+        {% endif %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="portfolio-contact" aria-labelledby="portfolio-contact-title">
+  <div>
+    <p class="eyebrow">Samenwerken</p>
+    <h2 id="portfolio-contact-title">Een digitaal idee dat vorm mag krijgen?</h2>
+    <p>Ik denk graag mee over content, websites en creatieve experimenten.</p>
+  </div>
+  <button class="button button--primary" type="button" data-contact-open>Stuur een bericht</button>
+</section>

@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "eyebrow": "NickKasmo.nl",
+    "title": "Het leven van een maker.",
+    "intro": "Geen perfect plaatje, maar een eerlijk verslag van bouwen, onderzoeken, proberen en doorgaan. Over wat ik maak, wat mij inspireert en wat ik onderweg leer."
+  },
+  "featured": {
+    "eyebrow": "Binnenkort op de blog",
+    "title": "Eerste eigen verhalen in voorbereiding.",
+    "meta": "Maken · Meemaken · Doormaken",
+    "text": "Ik publiceer hier alleen artikelen die ik zelf heb geschreven en echt wil delen. Tot die tijd verzamel ik mijn gedachten, experimenten en lessen achter de schermen."
+  },
+  "about": {
+    "eyebrow": "Wie is Nick?",
+    "title": "Hi, ik ben Nick.",
+    "paragraphs": [
+      "Doordeweeks werk ik als content marketeer. Daarnaast bouw ik al meer dan tien jaar aan mijn eigen kledingmerk, experimenteer ik met AI, maak ik video's en blijf ik nieuwe ideeën uitproberen.",
+      "NickKasmo is geen plek waar ik doe alsof alles af is. Het is de plek waar ik laat zien wat ik maak, wat me inspireert en wat ik onderweg aan het leren ben.",
+      "Soms is dat een espresso die beter kan. Soms een AI-experiment, een kledingdrop, een reis of een idee dat nog half rommelig is.",
+      "Alles begint met nieuwsgierigheid. Daarna komt het proberen, falen, bijschaven en doorgaan."
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "Nieuwsbrief",
+    "title": "Eerlijk onderweg blijven.",
+    "intro": "Af en toe een verhaal over maken, leren en wat er achter de schermen gebeurt.",
+    "note": "Geen hype. Geen perfecte plaatjes. Gewoon wat ik ontdek terwijl ik bezig ben."
+  },
+  "videoIntro": {
+    "eyebrow": "Laatste video's",
+    "title": "Momenten uit het maken en meemaken",
+    "text": "Korte video's van koffie, reizen en de kleine momenten die mijn creatieve werk voeden."
+  },
+  "videoGroups": [
+    {
+      "slug": "koffie-reels",
+      "eyebrow": "Instagram",
+      "title": "Meest bekeken koffie Reels",
+      "linkLabel": "Volg @nickkasmo",
+      "linkHref": "https://www.instagram.com/nickkasmo/"
+    },
+    {
+      "slug": "kreta-2026",
+      "eyebrow": "Vakantie",
+      "title": "Kreta 2026",
+      "linkLabel": "Bekijk op Instagram",
+      "linkHref": "https://www.instagram.com/reel/DadtyVHIi8J/"
+    }
+  ],
+  "gear": {
+    "eyebrow": "Waar ik aan bouw",
+    "title": "Projecten die nu spelen",
+    "note": "Een paar plekken waar mijn aandacht op dit moment naartoe gaat.",
+    "cards": [
+      { "icon": "shirt", "label": "Kleding", "title": "Kledingmerk", "text": "Nieuwe designs, webshopwerk en de keuzes achter iets dat ik al jaren zelf bouw.", "linkLabel": "Bekijk pijler", "linkHref": "/blog/wat-ik-maak/" },
+      { "icon": "sparkles", "label": "AI Tools", "title": "AI experimenten", "text": "Kleine tools en prototypes waarmee ik sneller kan proberen, leren en bijsturen.", "linkLabel": "Bekijk pijler", "linkHref": "/blog/wat-ik-maak/" },
+      { "icon": "camera", "label": "Video", "title": "Recente video's", "text": "Een plek voor beelden van koffie, reizen en werk dat onderweg ontstaat.", "linkLabel": "Bekijk video's", "linkHref": "/#videos" }
+    ]
+  },
+  "focus": {
+    "eyebrow": "Post metadata",
+    "title": "Niet alles hoeft af te zijn om waardevol te zijn",
+    "cards": [
+      { "icon": "sparkles", "title": "Wat ik maak", "lines": ["Projecten, tools, video's, kleding en designwerk.", "Output: ideeën die langzaam werkelijkheid worden."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-maak/" },
+      { "icon": "plane", "title": "Wat ik meemaak", "lines": ["Reizen, espresso, eten, fotografie en producten.", "Inspiratie: wat mijn creativiteit voedt."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-meemaak/" },
+      { "icon": "book-open", "title": "Wat ik doormaak", "lines": ["Processen, lessen, mislukkingen, twijfels en keuzes.", "Eerlijkheid: het werk achter het werk."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-doormaak/" },
+      { "icon": "pencil-line", "title": "Publicatieregel", "lines": ["Ik deel alleen iets als het laat zien wat ik maakte, leerde, ontdekte of wat mij inspireerde."], "linkLabel": "Naar blog", "linkHref": "/blog/" }
+    ]
+  },
+  "philosophy": {
+    "eyebrow": "Mijn filosofie",
+    "title": "Je hoeft niet te wachten tot je ergens goed in bent.",
+    "paragraphs": [
+      "Creativiteit begint niet bij talent. Het begint bij nieuwsgierigheid en de keuze om gewoon te beginnen.",
+      "Falen is geen bewijs dat je moet stoppen. Het is feedback. Het hoort bij het proces.",
+      "Ik laat niet alleen het resultaat zien, maar ook de rommelige stukken ertussen. Misschien herken je jezelf daarin."
+    ]
+  },
+  "follow": {
+    "eyebrow": "Volg mijn reis",
+    "title": "Benieuwd waar ik nu mee bezig ben?",
+    "text": "Ik deel wat ik maak, wat ik ontdek en wat ik onderweg leer. Rustig, eerlijk en zonder perfecte plaatjes."
+  }
+}
