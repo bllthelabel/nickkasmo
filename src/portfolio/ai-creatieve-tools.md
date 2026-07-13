@@ -14,4 +14,4 @@ chips:
 meta: Experimenten
 order: 2
 ---
-Kleine prototypes en workflows waarin ik onderzoek hoe AI het maken slimmer, sneller of verrassender kan maken. Test
+Kleine prototypes en workflows waarin ik onderzoek hoe AI het maken slimmer, sneller of verrassender kan maken.
