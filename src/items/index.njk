@@ -39,11 +39,11 @@ jsonLd:
   </div>
   <div class="item-list">
     {%- for item in collections.items | sortByOrder %}
-    <article class="item-row" data-tags="{{ item.data.itemTags | join(' ') }}">
+    <article class="item-row" data-tags="{{ (item.data.itemTags or []) | join(' ') }}">
       <div class="item-row__media"><img src="/assets/icons/{{ item.data.icon }}.svg" alt=""></div>
       <div class="item-row__content">
         <div class="tag-list" aria-label="Tags">
-          {%- for tag in item.data.itemTags %}
+          {%- for tag in (item.data.itemTags or []) %}
           <span>{{ tag | replace("-", " ") }}</span>
           {%- endfor %}
         </div>

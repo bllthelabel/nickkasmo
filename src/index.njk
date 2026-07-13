@@ -151,7 +151,7 @@ jsonLd:
       <div class="item-card__media"><img src="/assets/icons/{{ item.data.icon }}.svg" alt=""></div>
       <div class="item-card__content">
         <div class="tag-list" aria-label="Tags">
-          {%- for tag in item.data.itemTags %}
+          {%- for tag in (item.data.itemTags or []) %}
           <span>{{ tag | replace("-", " ") }}</span>
           {%- endfor %}
         </div>

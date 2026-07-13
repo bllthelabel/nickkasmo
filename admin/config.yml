@@ -42,7 +42,7 @@ collections:
         name: "icon"
         widget: "select"
         options: ["coffee", "camera", "video", "sparkles", "pencil-line", "shirt", "plane", "mail"]
-      - { label: "Tags", name: "itemTags", widget: "list" }
+      - { label: "Tags", name: "itemTags", widget: "list", default: [] }
       - { label: "Affiliate link", name: "affiliateLink", widget: "string", required: false, hint: "Leeg laten als er nog geen link is." }
       - { label: "Volgorde", name: "order", widget: "number", default: 1 }
       - { label: "Beschrijving", name: "body", widget: "markdown" }
@@ -63,8 +63,8 @@ collections:
         options: ["coffee", "camera", "video", "sparkles", "pencil-line", "shirt", "plane", "mail"]
       - { label: "Badge in beeld (bijv. 'Live project' of 'Wordt aangevuld')", name: "visualBadge", widget: "string" }
       - { label: "Status-tekst (alleen niet-uitgelichte kaarten)", name: "statusText", widget: "string", required: false }
-      - { label: "Tags (voor filter)", name: "projectTags", widget: "list" }
-      - { label: "Chips (zichtbare labels)", name: "chips", widget: "list" }
+      - { label: "Tags (voor filter)", name: "projectTags", widget: "list", default: [] }
+      - { label: "Chips (zichtbare labels)", name: "chips", widget: "list", default: [] }
       - { label: "Meta (bijv. 'Eigen project · 2026')", name: "meta", widget: "string" }
       - { label: "Rol (alleen uitgelicht)", name: "role", widget: "string", required: false }
       - { label: "Gemaakt met (alleen uitgelicht)", name: "tools", widget: "string", required: false }
