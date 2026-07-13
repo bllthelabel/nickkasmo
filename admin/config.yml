@@ -5,6 +5,8 @@ backend:
   base_url: https://nickkasmo-cms-auth.wandering-brook-36b4.workers.dev
   auth_endpoint: auth
 
+locale: "nl"
+logo_url: "/assets/brand/logo.svg"
 publish_mode: simple
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
@@ -16,6 +18,7 @@ collections:
     create: true
     slug: "{{slug}}"
     format: "frontmatter"
+    summary: "{{title}} — {{pillar}}"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - label: "Pijler"
@@ -36,6 +39,7 @@ collections:
     create: true
     slug: "{{slug}}"
     format: "frontmatter"
+    summary: "{{title}} — {{itemTags}}"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - label: "Icoon"
@@ -53,6 +57,7 @@ collections:
     create: true
     slug: "{{slug}}"
     format: "frontmatter"
+    summary: "{{title}} — {{meta}}"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Uitgelicht (grote kaart bovenaan)", name: "featured", widget: "boolean", default: false }
@@ -79,6 +84,7 @@ collections:
     create: true
     slug: "{{slug}}"
     format: "frontmatter"
+    summary: "{{title}} — {{group}}"
     fields:
       - { label: "Titel (intern, niet zichtbaar)", name: "title", widget: "string" }
       - label: "Groep"
