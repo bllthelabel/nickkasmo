@@ -10,6 +10,9 @@ layout: base.njk
 </section>
 
 <section class="section blog-post-body">
+  {% if image %}
+  <img class="post-cover-image" src="{{ image }}" alt="">
+  {% endif %}
   <div class="prose-block">
     {{ content | safe }}
   </div>

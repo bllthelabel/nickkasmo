@@ -7,7 +7,9 @@ backend:
 
 locale: "nl"
 logo_url: "/assets/brand/logo.svg"
-publish_mode: simple
+site_url: "https://nickkasmo.nl"
+display_url: "https://nickkasmo.nl"
+publish_mode: editorial_workflow
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
@@ -19,6 +21,7 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     summary: "{{title}} — {{pillar}}"
+    preview_path: "blog/{{fields.pillar}}/{{slug}}/"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - label: "Pijler"
@@ -31,6 +34,7 @@ collections:
       - { label: "Datum", name: "date", widget: "datetime" }
       - { label: "Samenvatting", name: "excerpt", widget: "text" }
       - { label: "Concept (niet live tonen)", name: "draft", widget: "boolean", default: true }
+      - { label: "Coverfoto (optioneel)", name: "image", widget: "image", required: false, hint: "Laat leeg voor een tekst-only artikel." }
       - { label: "Inhoud", name: "body", widget: "markdown" }
 
   - name: "items"
@@ -40,13 +44,32 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     summary: "{{title}} — {{itemTags}}"
+    preview_path: "items/"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - label: "Icoon"
         name: "icon"
         widget: "select"
         options: ["coffee", "camera", "video", "sparkles", "pencil-line", "shirt", "plane", "mail"]
-      - { label: "Tags", name: "itemTags", widget: "list", default: [] }
+      - { label: "Foto (optioneel)", name: "image", widget: "image", required: false, hint: "Laat leeg om het icoon te gebruiken." }
+      - label: "Tags"
+        name: "itemTags"
+        widget: "select"
+        multiple: true
+        default: []
+        options:
+          - { label: "Koffie", value: "koffie" }
+          - { label: "Video", value: "video" }
+          - { label: "Software", value: "software" }
+          - { label: "AI", value: "ai" }
+          - { label: "Reizen", value: "reizen" }
+          - { label: "Hardware", value: "hardware" }
+          - { label: "Accessoire", value: "accessoire" }
+          - { label: "Workflow", value: "workflow" }
+          - { label: "Dagelijks gebruik", value: "dagelijks-gebruik" }
+          - { label: "Content", value: "content" }
+          - { label: "Maken", value: "maken" }
+          - { label: "Affiliate", value: "affiliate" }
       - { label: "Affiliate link", name: "affiliateLink", widget: "string", required: false, hint: "Leeg laten als er nog geen link is." }
       - { label: "Volgorde", name: "order", widget: "number", default: 1 }
       - { label: "Beschrijving", name: "body", widget: "markdown" }
@@ -58,6 +81,7 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     summary: "{{title}} — {{meta}}"
+    preview_path: "portfolio/"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Uitgelicht (grote kaart bovenaan)", name: "featured", widget: "boolean", default: false }
@@ -66,9 +90,19 @@ collections:
         name: "icon"
         widget: "select"
         options: ["coffee", "camera", "video", "sparkles", "pencil-line", "shirt", "plane", "mail"]
+      - { label: "Foto (optioneel)", name: "image", widget: "image", required: false, hint: "Laat leeg om het icoon te gebruiken." }
       - { label: "Badge in beeld (bijv. 'Live project' of 'Wordt aangevuld')", name: "visualBadge", widget: "string" }
       - { label: "Status-tekst (alleen niet-uitgelichte kaarten)", name: "statusText", widget: "string", required: false }
-      - { label: "Tags (voor filter)", name: "projectTags", widget: "list", default: [] }
+      - label: "Tags (voor filter)"
+        name: "projectTags"
+        widget: "select"
+        multiple: true
+        default: []
+        options:
+          - { label: "Websites", value: "websites" }
+          - { label: "AI", value: "ai" }
+          - { label: "Content", value: "content" }
+          - { label: "Design", value: "design" }
       - { label: "Chips (zichtbare labels)", name: "chips", widget: "list", default: [] }
       - { label: "Meta (bijv. 'Eigen project · 2026')", name: "meta", widget: "string" }
       - { label: "Rol (alleen uitgelicht)", name: "role", widget: "string", required: false }
@@ -85,6 +119,7 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     summary: "{{title}} — {{group}}"
+    preview_path: "/#videos"
     fields:
       - { label: "Titel (intern, niet zichtbaar)", name: "title", widget: "string" }
       - label: "Groep"

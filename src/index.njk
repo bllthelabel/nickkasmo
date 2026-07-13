@@ -148,7 +148,13 @@ jsonLd:
   <div class="item-grid item-grid--preview">
     {%- for item in collections.items | limit(3) %}
     <article class="item-card">
-      <div class="item-card__media"><img src="/assets/icons/{{ item.data.icon }}.svg" alt=""></div>
+      <div class="item-card__media">
+        {% if item.data.image %}
+        <img class="media-photo" src="{{ item.data.image }}" alt="">
+        {% else %}
+        <img src="/assets/icons/{{ item.data.icon }}.svg" alt="">
+        {% endif %}
+      </div>
       <div class="item-card__content">
         <div class="tag-list" aria-label="Tags">
           {%- for tag in (item.data.itemTags or []) %}
