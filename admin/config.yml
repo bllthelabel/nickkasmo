@@ -2,7 +2,7 @@ backend:
   name: github
   repo: bllthelabel/nickkasmo
   branch: main
-  base_url: https://nickkasmo-cms-auth.workers.dev
+  base_url: https://nickkasmo-cms-auth.wandering-brook-36b4.workers.dev
   auth_endpoint: auth
 
 publish_mode: simple
