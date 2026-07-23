@@ -146,14 +146,6 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Titel", name: "title", widget: "string" }
               - { label: "Intro", name: "intro", widget: "text" }
-          - label: "Binnenkort op de blog"
-            name: "featured"
-            widget: "object"
-            fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Titel", name: "title", widget: "string" }
-              - { label: "Meta", name: "meta", widget: "string" }
-              - { label: "Tekst", name: "text", widget: "text" }
           - label: "Over mij"
             name: "about"
             widget: "object"

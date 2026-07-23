@@ -2,7 +2,9 @@
 title: Sage Barista Express
 icon: coffee
 itemTags:
-  - Koffiee
+  - koffie
+  - hardware
+affiliateLink: "https://link.amazon/B02sOsAnc"
 order: 1
 ---
-Groot fan! Binnenkort meer informatie.
+Elke ochtend dezelfde routine: bonen malen, tampen, shot trekken. Geen gedoe, gewoon een goede espresso voor ik aan mijn dag begin.
