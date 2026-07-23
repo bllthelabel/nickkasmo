@@ -1,35 +1,35 @@
 {
   "hero": {
     "eyebrow": "NickKasmo.nl",
-    "title": "Het leven van een maker.",
-    "intro": "Geen perfect plaatje, maar een eerlijk verslag van bouwen, onderzoeken, proberen en doorgaan. Over wat ik maak, wat mij inspireert en wat ik onderweg leer."
+    "title": "Onderweg met Nick.",
+    "intro": "Geen gladgestreken verhaal, maar eerlijk: bouwen, verdwalen, doorgaan. Wat ik onderweg maak, tegenkom en leer."
   },
   "featured": {
     "eyebrow": "Binnenkort op de blog",
     "title": "Eerste eigen verhalen in voorbereiding.",
     "meta": "Maken · Meemaken · Doormaken",
-    "text": "Ik publiceer hier alleen artikelen die ik zelf heb geschreven en echt wil delen. Tot die tijd verzamel ik mijn gedachten, experimenten en lessen achter de schermen."
+    "text": "Ik publiceer hier alleen verhalen die ik zelf heb geschreven en echt wil delen. Tot die tijd verzamel ik onderweg mijn gedachten, experimenten en lessen."
   },
   "about": {
     "eyebrow": "Wie is Nick?",
     "title": "Hi, ik ben Nick.",
     "paragraphs": [
-      "Doordeweeks werk ik als content marketeer. Daarnaast bouw ik al meer dan tien jaar aan mijn eigen kledingmerk, experimenteer ik met AI, maak ik video's en blijf ik nieuwe ideeën uitproberen.",
-      "NickKasmo is geen plek waar ik doe alsof alles af is. Het is de plek waar ik laat zien wat ik maak, wat me inspireert en wat ik onderweg aan het leren ben.",
-      "Soms is dat een espresso die beter kan. Soms een AI-experiment, een kledingdrop, een reis of een idee dat nog half rommelig is.",
-      "Alles begint met nieuwsgierigheid. Daarna komt het proberen, falen, bijschaven en doorgaan."
+      "Doordeweeks werk ik als content marketeer. Daarnaast bouw ik al meer dan tien jaar aan mijn eigen kledingmerk, experimenteer ik met AI, maak ik video's en blijf ik onderweg nieuwe dingen uitproberen.",
+      "NickKasmo is geen reisverslag met alleen mooie bestemmingen. Het is de plek waar ik laat zien wat ik onderweg bouw, tegenkom en leer.",
+      "Soms is dat een espresso die beter kan. Soms een AI-experiment, een kledingdrop, een reis of een idee dat nog ergens halverwege de route ligt.",
+      "Alles begint met nieuwsgierigheid. Daarna vertrek ik gewoon, ook al weet ik de weg nog niet."
     ]
   },
   "newsletter": {
     "eyebrow": "Nieuwsbrief",
     "title": "Eerlijk onderweg blijven.",
-    "intro": "Af en toe een verhaal over maken, leren en wat er achter de schermen gebeurt.",
-    "note": "Geen hype. Geen perfecte plaatjes. Gewoon wat ik ontdek terwijl ik bezig ben."
+    "intro": "Af en toe een bericht over wat ik onderweg bouw, tegenkom en leer.",
+    "note": "Geen hype. Geen mooie vakantiefoto's. Gewoon wat ik onderweg tegenkom."
   },
   "videoIntro": {
     "eyebrow": "Laatste video's",
-    "title": "Momenten uit het maken en meemaken",
-    "text": "Korte video's van koffie, reizen en de kleine momenten die mijn creatieve werk voeden."
+    "title": "Momenten onderweg",
+    "text": "Korte video's van koffie, reizen en de kleine momenten die me onderweg blijven voeden."
   },
   "videoGroups": [
     {
@@ -49,35 +49,35 @@
   ],
   "gear": {
     "eyebrow": "Waar ik aan bouw",
-    "title": "Projecten die nu spelen",
-    "note": "Een paar plekken waar mijn aandacht op dit moment naartoe gaat.",
+    "title": "Projecten die nu onderweg zijn",
+    "note": "Een paar projecten waar mijn aandacht nu naartoe gaat.",
     "cards": [
-      { "icon": "shirt", "label": "Kleding", "title": "Kledingmerk", "text": "Nieuwe designs, webshopwerk en de keuzes achter iets dat ik al jaren zelf bouw.", "linkLabel": "Bekijk pijler", "linkHref": "/blog/wat-ik-maak/" },
-      { "icon": "sparkles", "label": "AI Tools", "title": "AI experimenten", "text": "Kleine tools en prototypes waarmee ik sneller kan proberen, leren en bijsturen.", "linkLabel": "Bekijk pijler", "linkHref": "/blog/wat-ik-maak/" },
+      { "icon": "shirt", "label": "Kleding", "title": "Kledingmerk", "text": "Nieuwe designs, webshopwerk en de keuzes achter iets dat ik al jaren onderweg bouw.", "linkLabel": "Bekijk pijler", "linkHref": "/blog/wat-ik-maak/" },
+      { "icon": "sparkles", "label": "AI Tools", "title": "AI experimenten", "text": "Kleine tools en prototypes waarmee ik onderweg sneller kan proberen, leren en bijsturen.", "linkLabel": "Bekijk pijler", "linkHref": "/blog/wat-ik-maak/" },
       { "icon": "camera", "label": "Video", "title": "Recente video's", "text": "Een plek voor beelden van koffie, reizen en werk dat onderweg ontstaat.", "linkLabel": "Bekijk video's", "linkHref": "/#videos" }
     ]
   },
   "focus": {
     "eyebrow": "Drie pijlers",
-    "title": "De lat ligt lager dan je denkt.",
+    "title": "Een perfecte route is nooit de lat. De lat is: vertrokken zijn.",
     "cards": [
-      { "icon": "sparkles", "title": "Wat ik maak", "lines": ["Projecten, tools, video's, kleding en designwerk.", "Output: ideeën die langzaam werkelijkheid worden."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-maak/" },
-      { "icon": "plane", "title": "Wat ik meemaak", "lines": ["Reizen, espresso, eten, fotografie en producten.", "Inspiratie: wat mijn creativiteit voedt."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-meemaak/" },
-      { "icon": "book-open", "title": "Wat ik doormaak", "lines": ["Processen, lessen, mislukkingen, twijfels en keuzes.", "Eerlijkheid: het werk achter het werk."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-doormaak/" }
+      { "icon": "sparkles", "title": "Wat ik maak", "lines": ["De dingen die ik onderweg maak en met me meedraag.", "Projecten en tools die ontstaan omdat ik ze onderweg nodig had, of gewoon wilde laten bestaan."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-maak/" },
+      { "icon": "plane", "title": "Wat ik meemaak", "lines": ["Steden, gesprekken, smaken en uitzichten die ik onderweg tegenkom.", "Dingen die niet van mij zijn, maar me wel veranderen."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-meemaak/" },
+      { "icon": "book-open", "title": "Wat ik doormaak", "lines": ["Verkeerde afslagen, vertragingen en de momenten dat ik de kaart weer moet pakken.", "Alles wat bij de reis hoort, maar niet op de ansichtkaart komt."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-doormaak/" }
     ]
   },
   "philosophy": {
     "eyebrow": "Mijn filosofie",
-    "title": "Ik wachtte niet tot ik ergens goed in was.",
+    "title": "Een goede reis begint niet bij een perfecte routekaart.",
     "paragraphs": [
-      "Creativiteit begint niet bij talent. Het begint bij nieuwsgierigheid en de keuze om gewoon te beginnen.",
-      "Falen is geen tegenslag. Het is feedback. Gewoon onderdeel van het proces.",
-      "Ik laat niet alleen het resultaat zien, maar ook de rommelige stukken ertussen. Misschien herken je jezelf daarin."
+      "Het begint bij nieuwsgierigheid en de keuze om de deur uit te gaan.",
+      "Verdwalen is geen tegenslag. Het is onderdeel van de route — soms het beste stuk ervan.",
+      "Ik laat niet alleen de aankomst zien, maar ook de omwegen ertussen. Vaak genoeg herken je jezelf daarin."
     ]
   },
   "follow": {
     "eyebrow": "Volg mijn reis",
-    "title": "Ik laat het proces zien, niet alleen het eindresultaat.",
-    "text": "Wat ik maak, wat ik ontdek en wat ik onderweg leer. Rustig, eerlijk en zonder perfecte plaatjes."
+    "title": "Ik laat de rit zien, niet alleen de aankomst.",
+    "text": "Wat ik onderweg bouw, tegenkom en leer. Rustig, eerlijk en zonder mooie vakantiefoto's."
   }
 }

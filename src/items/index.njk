@@ -16,7 +16,7 @@ jsonLd:
 ---
 <section class="items-hero">
   <p class="eyebrow">Items die ik gebruik</p>
-  <h1>Een overzicht van spullen, producten en software.</h1>
+  <h1>Spullen die met me meereizen.</h1>
   <p>Elk item kan meerdere tags hebben. Zo kan een camera tegelijk bij video, reizen, hardware en dagelijks gebruik horen.</p>
   <p class="affiliate-note">Sommige links kunnen affiliate links zijn. Als je via zo'n link iets koopt, kan ik daar een kleine vergoeding voor krijgen. Jij betaalt niets extra.</p>
 </section>
@@ -33,7 +33,7 @@ jsonLd:
     <div class="filter-actions" aria-label="Filter items op tag">
       <button class="button button--primary item-filter-pill" type="button" data-item-filter="all">Alles</button>
       {%- for tag in filterTags %}
-      <button class="button button--secondary item-filter-pill" type="button" data-item-filter="{{ tag }}">{{ tag | capitalize }}</button>
+      <button class="button button--secondary item-filter-pill" type="button" data-item-filter="{{ tag }}">{{ "AI" if tag == "ai" else (tag | capitalize) }}</button>
       {%- endfor %}
     </div>
   </div>

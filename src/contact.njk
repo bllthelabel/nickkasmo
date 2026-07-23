@@ -19,9 +19,9 @@ jsonLd:
   <p>Stuur me een bericht over een idee, vraag of iets dat je zelf aan het maken bent.</p>
 </section>
 
-<section class="section contact-page-section" aria-label="Contactformulier">
+<section class="contact-page-section" aria-label="Contactformulier">
   <div class="contact-page-form">
-    <form class="contact-form" data-contact-form data-endpoint="{{ site.formsWorkerUrl }}/contact">
+    <form class="contact-form" data-contact-form data-endpoint="{{ site.formsWorkerUrl }}/contact" data-success-message="Onderweg naar mij. Ik lees het en reageer zo snel mogelijk.">
       <label for="contact-voornaam">Voornaam</label>
       <input id="contact-voornaam" name="voornaam" type="text" autocomplete="given-name" required>
       <label for="contact-achternaam">Achternaam</label>
@@ -36,6 +36,7 @@ jsonLd:
       </div>
       <p class="form-error" data-form-error role="alert"></p>
       <button class="button button--primary" type="submit">Verstuur bericht</button>
+      <p class="form-success" data-form-success role="status"></p>
     </form>
   </div>
 </section>

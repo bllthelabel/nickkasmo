@@ -52,8 +52,8 @@
         </a>
         <div>
           <p class="eyebrow">NickKasmo.nl</p>
-          <h2>Het leven van een maker.</h2>
-          <p>Ik deel wat ik maak, meemaak en doormaak. Rustig, eerlijk en onderweg.</p>
+          <h2>Onderweg met Nick.</h2>
+          <p>Ik deel wat ik onderweg maak, tegenkom en doormaak. Rustig, eerlijk en onderweg.</p>
         </div>
       </div>
 
@@ -84,8 +84,8 @@
         <button class="contact-dialog__close" type="button" data-newsletter-close aria-label="Sluit nieuwsbrief formulier">&times;</button>
         <p class="eyebrow">Nieuwsbrief</p>
         <h2 id="newsletter-modal-title">Eerlijk onderweg blijven.</h2>
-        <p>Af en toe een verhaal over maken, leren en wat er achter de schermen gebeurt.</p>
-        <form class="contact-form newsletter-modal-form" data-newsletter-form data-endpoint="{{ site.formsWorkerUrl }}/newsletter">
+        <p>Af en toe een bericht over wat ik onderweg bouw, tegenkom en leer.</p>
+        <form class="contact-form newsletter-modal-form" data-newsletter-form data-endpoint="{{ site.formsWorkerUrl }}/newsletter" data-success-message="Welkom. Je hoort van me zodra ik onderweg weer iets tegenkom.">
           <label for="newsletter-modal-email">E-mail</label>
           <input id="newsletter-modal-email" name="email" type="email" autocomplete="email" placeholder="jouw@email.com" required>
           <div class="form-honeypot" aria-hidden="true">
@@ -94,7 +94,8 @@
           </div>
           <p class="form-error" data-form-error role="alert"></p>
           <button class="button button--primary" type="submit">Inschrijven</button>
-          <p>Geen hype. Geen perfecte plaatjes. Gewoon wat ik ontdek terwijl ik bezig ben.</p>
+          <p>Geen hype. Geen mooie vakantiefoto's. Gewoon wat ik onderweg tegenkom.</p>
+          <p class="form-success" data-form-success role="status"></p>
         </form>
       </section>
     </div>

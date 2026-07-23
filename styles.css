@@ -144,6 +144,20 @@ a {
   display: none;
 }
 
+.form-success {
+  display: none;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.contact-form.is-submitted > *:not(.form-success) {
+  display: none;
+}
+
+.contact-form.is-submitted .form-success {
+  display: block;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
@@ -761,6 +775,10 @@ h3 {
   padding: 112px var(--gutter) 72px;
 }
 
+.contact-hero {
+  padding-bottom: 32px;
+}
+
 .items-hero h1,
 .contact-hero h1 {
   max-width: 860px;
@@ -772,6 +790,12 @@ h3 {
   color: var(--text-secondary);
   font-size: 21px;
   line-height: 1.7;
+}
+
+.contact-page-section {
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 96px;
 }
 
 .contact-page-form {

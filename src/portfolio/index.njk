@@ -5,8 +5,8 @@ eleventyExcludeFromCollections: true
 title: Portfolio - NickKasmo.nl
 canonical: /portfolio/
 ogTitle: Portfolio - NickKasmo.nl
-metaDescription: "Bekijk het digitale werk van Nick Kasmo: websites, content, AI-experimenten en digitale merkervaringen."
-ogDescription: "Een groeiend overzicht van websites, content, AI-experimenten en digitale merkervaringen van Nick Kasmo."
+metaDescription: "Bekijk het digitale werk van Nick Kasmo: websites, content en AI-experimenten, onderweg gebouwd."
+ogDescription: "Een groeiend overzicht van websites, content en AI-experimenten van Nick Kasmo — de plekken die onderweg zijn ontstaan."
 filterTags: [websites, ai, content, design]
 jsonLd:
   "@context": "https://schema.org"
@@ -16,8 +16,8 @@ jsonLd:
 ---
 <section class="portfolio-hero">
   <p class="eyebrow">Portfolio</p>
-  <h1>Digitaal werk, gemaakt vanuit nieuwsgierigheid.</h1>
-  <p>Een groeiend overzicht van websites, content, AI-experimenten en digitale merkervaringen. Van eerste idee tot iets dat werkt, beweegt of online staat.</p>
+  <h1>Digitaal werk, onderweg gemaakt.</h1>
+  <p>Een groeiend overzicht van websites, content en AI-experimenten — de plekken die ik onderweg heb gebouwd. Van eerste idee tot iets dat werkt, beweegt of online staat.</p>
   <a class="button button--primary" href="#projecten">Bekijk mijn werk</a>
 </section>
 
@@ -31,11 +31,11 @@ jsonLd:
   </div>
 
   <div class="filter-block" aria-labelledby="portfolio-filter-title">
-    <h3 id="portfolio-filter-title">Filter op discipline</h3>
+    <h3 id="portfolio-filter-title">Filter op soort werk</h3>
     <div class="filter-actions" aria-label="Filter portfolio op discipline">
       <button class="button button--primary project-filter-pill" type="button" data-project-filter="all">Alles</button>
       {%- for tag in filterTags %}
-      <button class="button button--secondary project-filter-pill" type="button" data-project-filter="{{ tag }}">{{ tag | capitalize }}</button>
+      <button class="button button--secondary project-filter-pill" type="button" data-project-filter="{{ tag }}">{{ "AI" if tag == "ai" else (tag | capitalize) }}</button>
       {%- endfor %}
     </div>
   </div>
@@ -83,7 +83,7 @@ jsonLd:
   <div>
     <p class="eyebrow">Samenwerken</p>
     <h2 id="portfolio-contact-title">Een digitaal idee dat om vorm vraagt.</h2>
-    <p>Ik denk graag mee over content, websites en creatieve experimenten.</p>
+    <p>Heb je een idee dat nog ergens halverwege ligt? Soms neem ik een opdracht aan, als die bij mijn werk past. Stuur het gerust — ik denk er vrijblijvend over mee.</p>
   </div>
   <a class="button button--primary" href="/contact/">Stuur een bericht</a>
 </section>

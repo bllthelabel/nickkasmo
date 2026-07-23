@@ -231,7 +231,11 @@ async function submitForm(form, buildPayload) {
 
     form.classList.add("is-submitted");
     if (button) {
-      button.textContent = "Dank je";
+      button.textContent = "Verstuurd";
+    }
+    const successEl = form.querySelector("[data-form-success]");
+    if (successEl) {
+      successEl.textContent = form.dataset.successMessage || "Gelukt.";
     }
   } catch (error) {
     if (button) {
