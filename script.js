@@ -248,17 +248,17 @@ async function submitForm(form, buildPayload) {
   }
 }
 
-const newsletterForm = document.querySelector("[data-newsletter-form]");
+const newsletterForms = document.querySelectorAll("[data-newsletter-form]");
 
-if (newsletterForm) {
+newsletterForms.forEach((newsletterForm) => {
   newsletterForm.addEventListener("submit", (event) => {
     event.preventDefault();
     submitForm(newsletterForm, () => ({
-      email: newsletterForm.querySelector("#newsletter-modal-email").value,
-      website: newsletterForm.querySelector("#newsletter-modal-website").value,
+      email: newsletterForm.querySelector('input[type="email"]').value,
+      website: newsletterForm.querySelector('input[name="website"]').value,
     }));
   });
-}
+});
 
 const contactForm = document.querySelector("[data-contact-form]");
 

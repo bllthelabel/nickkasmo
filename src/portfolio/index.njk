@@ -40,13 +40,14 @@ jsonLd:
     </div>
   </div>
 
+  {% if collections.portfolio.length %}
   <div class="portfolio-grid">
     {%- for project in collections.portfolio | sortByOrder %}
     <article class="project-card{% if project.data.featured %} project-card--featured{% endif %}" data-project-tags="{{ (project.data.projectTags or []) | join(' ') }}">
       <div class="project-card__visual{% if project.data.featured %} project-card__visual--site{% endif %}{% if project.data.image %} project-card__visual--photo{% endif %}">
         <strong class="project-card__number">{{ project.data.number }}</strong>
         {% if project.data.image %}
-        <img class="media-photo" src="{{ project.data.image }}" alt="">
+        <img class="media-photo" src="{{ project.data.image }}" alt="{{ project.data.title }}" loading="lazy">
         {% else %}
         <img src="/assets/icons/{{ project.data.icon }}.svg" alt="">
         {% endif %}
@@ -77,6 +78,16 @@ jsonLd:
     </article>
     {%- endfor %}
   </div>
+  {% else %}
+  <div class="latest-grid">
+    <article class="latest-card">
+      <span>Portfolio</span>
+      <h3>Dit overzicht is nog leeg.</h3>
+      <p>De projecten die ik onderweg bouw komen hier zodra ze af zijn. Het bouwproces zelf deel ik al op de blogpijler.</p>
+      <a href="/blog/wat-ik-maak/">Naar wat ik maak</a>
+    </article>
+  </div>
+  {% endif %}
 </section>
 
 <section class="portfolio-contact" aria-labelledby="portfolio-contact-title">

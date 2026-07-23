@@ -42,7 +42,7 @@ jsonLd:
     <article class="item-row" data-tags="{{ (item.data.itemTags or []) | join(' ') }}">
       <div class="item-row__media">
         {% if item.data.image %}
-        <img class="media-photo" src="{{ item.data.image }}" alt="">
+        <img class="media-photo" src="{{ item.data.image }}" alt="{{ item.data.title }}" loading="lazy">
         {% else %}
         <img src="/assets/icons/{{ item.data.icon }}.svg" alt="">
         {% endif %}

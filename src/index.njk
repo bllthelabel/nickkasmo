@@ -112,9 +112,9 @@ jsonLd:
   <div class="latest-grid">
     <article class="latest-card">
       <span>Blog</span>
-      <h3>0 artikelen geplaatst</h3>
-      <p>Ik toon hier straks alleen stukken die ik zelf heb gepubliceerd.</p>
-      <button type="button" data-newsletter-open>Ontvang de eerste update</button>
+      <h3>Ik ben net vertrokken.</h3>
+      <p>De eerste artikelen staan hier zodra ze af zijn. Ondertussen deel ik al kleine momenten op Instagram.</p>
+      <a href="https://www.instagram.com/nickkasmo/" target="_blank" rel="noreferrer">Volg @nickkasmo</a>
     </article>
   </div>
   {% endif %}
@@ -126,11 +126,23 @@ jsonLd:
     <h2 id="newsletter-title">{{ home.newsletter.title }}</h2>
     <p>{{ home.newsletter.intro }}</p>
   </div>
-  <div class="newsletter-form">
-    <span>Inschrijven op nieuwsbrief</span>
-    <button type="button" data-newsletter-open>Open aanmeldformulier</button>
+  <form class="newsletter-form" data-newsletter-form data-endpoint="{{ site.formsWorkerUrl }}/newsletter" data-success-message="Welkom. Je hoort van me zodra ik onderweg weer iets tegenkom.">
+    <label for="newsletter-inline-email">Inschrijven op nieuwsbrief</label>
+    <div>
+      <input id="newsletter-inline-email" name="email" type="email" autocomplete="email" placeholder="jouw@email.com" required>
+      <button type="submit">
+        <img src="/assets/icons/mail.svg" alt="">
+        Inschrijven
+      </button>
+    </div>
+    <div class="form-honeypot" aria-hidden="true">
+      <label for="newsletter-inline-website">Website</label>
+      <input id="newsletter-inline-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <p class="form-error" data-form-error role="alert"></p>
     <p>{{ home.newsletter.note }}</p>
-  </div>
+    <p class="form-success" data-form-success role="status"></p>
+  </form>
 </section>
 
 <section class="section items-section" id="items" aria-labelledby="items-title">
@@ -150,7 +162,7 @@ jsonLd:
     <article class="item-card">
       <div class="item-card__media">
         {% if item.data.image %}
-        <img class="media-photo" src="{{ item.data.image }}" alt="">
+        <img class="media-photo" src="{{ item.data.image }}" alt="{{ item.data.title }}" loading="lazy">
         {% else %}
         <img src="/assets/icons/{{ item.data.icon }}.svg" alt="">
         {% endif %}
@@ -261,7 +273,7 @@ jsonLd:
     <p>{{ home.follow.text }}</p>
   </div>
   <div class="follow-links">
-    <button type="button" data-newsletter-open>Inschrijven op nieuwsbrief</button>
+    <a href="/portfolio/"><img src="/assets/icons/arrow-up-right.svg" alt="">Bekijk mijn werk</a>
     {%- for social in site.socials %}
     <a href="{{ social.href }}" target="_blank" rel="noreferrer"><img src="/assets/icons/{{ social.icon }}.svg" alt="">{{ social.label }}</a>
     {%- endfor %}
