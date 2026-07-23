@@ -1,13 +1,15 @@
 {
   "url": "https://nickkasmo.nl",
   "ogImage": "https://nickkasmo.nl/assets/nickkasmo.nl%20logo.png",
+  "formsWorkerUrl": "https://nickkasmo-forms.wandering-brook-36b4.workers.dev",
   "nav": [
     { "label": "Blog", "href": "/blog/" },
     { "label": "Portfolio", "href": "/portfolio/" },
     { "label": "Items", "href": "/items/" },
     { "label": "Video's", "href": "/#videos" },
     { "label": "Nieuwsbrief", "href": "/#nieuwsbrief", "newsletter": true },
-    { "label": "Over mij", "href": "/#wie-is-nick" }
+    { "label": "Over mij", "href": "/#wie-is-nick" },
+    { "label": "Contact", "href": "/contact/" }
   ],
   "socials": [
     { "label": "Instagram", "href": "https://www.instagram.com/nickkasmo/", "icon": "instagram" },

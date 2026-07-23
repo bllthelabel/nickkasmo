@@ -127,6 +127,23 @@ a {
   border: 0;
 }
 
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-error {
+  color: #b3261e;
+  font-size: 0.9em;
+}
+
+.form-error:empty {
+  display: none;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
@@ -589,7 +606,7 @@ h3 {
 
 .focus-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -737,21 +754,28 @@ h3 {
   padding-top: 88px;
 }
 
-.items-hero {
+.items-hero,
+.contact-hero {
   max-width: var(--content-wide);
   margin: 0 auto;
   padding: 112px var(--gutter) 72px;
 }
 
-.items-hero h1 {
+.items-hero h1,
+.contact-hero h1 {
   max-width: 860px;
 }
 
-.items-hero p:not(.eyebrow) {
+.items-hero p:not(.eyebrow),
+.contact-hero p:not(.eyebrow) {
   max-width: 720px;
   color: var(--text-secondary);
   font-size: 21px;
   line-height: 1.7;
+}
+
+.contact-page-form {
+  max-width: 560px;
 }
 
 .affiliate-note {
@@ -1818,6 +1842,8 @@ a.item-card__action:hover {
 }
 
 .footer-email-button {
+  display: inline-flex;
+  align-items: center;
   min-height: 40px;
   padding: 0 16px;
   background: var(--surface-card);
@@ -1827,6 +1853,7 @@ a.item-card__action:hover {
   cursor: pointer;
   font: inherit;
   font-weight: 600;
+  text-decoration: none;
   transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
 }
 
@@ -2296,6 +2323,7 @@ a.item-card__action:hover {
 
   .home-hero,
   .items-hero,
+  .contact-hero,
   .portfolio-hero,
   .blog-hero {
     padding-top: 72px;

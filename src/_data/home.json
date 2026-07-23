@@ -58,27 +58,26 @@
     ]
   },
   "focus": {
-    "eyebrow": "Post metadata",
-    "title": "Niet alles hoeft af te zijn om waardevol te zijn",
+    "eyebrow": "Drie pijlers",
+    "title": "De lat ligt lager dan je denkt.",
     "cards": [
       { "icon": "sparkles", "title": "Wat ik maak", "lines": ["Projecten, tools, video's, kleding en designwerk.", "Output: ideeën die langzaam werkelijkheid worden."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-maak/" },
       { "icon": "plane", "title": "Wat ik meemaak", "lines": ["Reizen, espresso, eten, fotografie en producten.", "Inspiratie: wat mijn creativiteit voedt."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-meemaak/" },
-      { "icon": "book-open", "title": "Wat ik doormaak", "lines": ["Processen, lessen, mislukkingen, twijfels en keuzes.", "Eerlijkheid: het werk achter het werk."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-doormaak/" },
-      { "icon": "pencil-line", "title": "Publicatieregel", "lines": ["Ik deel alleen iets als het laat zien wat ik maakte, leerde, ontdekte of wat mij inspireerde."], "linkLabel": "Naar blog", "linkHref": "/blog/" }
+      { "icon": "book-open", "title": "Wat ik doormaak", "lines": ["Processen, lessen, mislukkingen, twijfels en keuzes.", "Eerlijkheid: het werk achter het werk."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-doormaak/" }
     ]
   },
   "philosophy": {
     "eyebrow": "Mijn filosofie",
-    "title": "Je hoeft niet te wachten tot je ergens goed in bent.",
+    "title": "Ik wachtte niet tot ik ergens goed in was.",
     "paragraphs": [
       "Creativiteit begint niet bij talent. Het begint bij nieuwsgierigheid en de keuze om gewoon te beginnen.",
-      "Falen is geen bewijs dat je moet stoppen. Het is feedback. Het hoort bij het proces.",
+      "Falen is geen tegenslag. Het is feedback. Gewoon onderdeel van het proces.",
       "Ik laat niet alleen het resultaat zien, maar ook de rommelige stukken ertussen. Misschien herken je jezelf daarin."
     ]
   },
   "follow": {
     "eyebrow": "Volg mijn reis",
-    "title": "Benieuwd waar ik nu mee bezig ben?",
-    "text": "Ik deel wat ik maak, wat ik ontdek en wat ik onderweg leer. Rustig, eerlijk en zonder perfecte plaatjes."
+    "title": "Ik laat het proces zien, niet alleen het eindresultaat.",
+    "text": "Wat ik maak, wat ik ontdek en wat ik onderweg leer. Rustig, eerlijk en zonder perfecte plaatjes."
   }
 }

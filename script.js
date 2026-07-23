@@ -153,49 +153,10 @@ if (projectFilterPills.length && projectCards.length) {
   });
 }
 
-const contactModal = document.querySelector("[data-contact-modal]");
-const contactOpenButtons = document.querySelectorAll("[data-contact-open]");
-const contactCloseButtons = document.querySelectorAll("[data-contact-close]");
 const newsletterModal = document.querySelector("[data-newsletter-modal]");
 const newsletterOpenButtons = document.querySelectorAll("[data-newsletter-open]");
 const newsletterCloseButtons = document.querySelectorAll("[data-newsletter-close]");
 let lastModalTrigger = null;
-
-if (contactModal && contactOpenButtons.length) {
-  const closeContactModal = () => {
-    contactModal.hidden = true;
-
-    if (lastModalTrigger) {
-      lastModalTrigger.focus();
-    }
-  };
-
-  const openContactModal = (trigger) => {
-    lastModalTrigger = trigger;
-    contactModal.hidden = false;
-    const firstInput = contactModal.querySelector("#contact-name");
-
-    if (firstInput) {
-      firstInput.focus();
-    }
-  };
-
-  contactOpenButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      openContactModal(button);
-    });
-  });
-
-  contactCloseButtons.forEach((button) => {
-    button.addEventListener("click", closeContactModal);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !contactModal.hidden) {
-      closeContactModal();
-    }
-  });
-}
 
 if (newsletterModal && newsletterOpenButtons.length) {
   const closeNewsletterModal = () => {
@@ -234,16 +195,78 @@ if (newsletterModal && newsletterOpenButtons.length) {
   });
 }
 
-const newsletterForm = document.querySelector(".newsletter-modal-form");
+async function submitForm(form, buildPayload) {
+  const endpoint = form.dataset.endpoint;
+  const button = form.querySelector("button[type=submit]");
+  const errorEl = form.querySelector("[data-form-error]");
+  const originalButtonText = button ? button.textContent : "";
+
+  if (errorEl) {
+    errorEl.textContent = "";
+  }
+  if (button) {
+    button.disabled = true;
+    button.textContent = "Versturen…";
+  }
+
+  const fallbackMessage = "Er ging iets mis. Probeer het later opnieuw.";
+
+  try {
+    let response;
+    try {
+      response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(buildPayload()),
+      });
+    } catch {
+      throw new Error(fallbackMessage);
+    }
+
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      throw new Error(data.error || fallbackMessage);
+    }
+
+    form.classList.add("is-submitted");
+    if (button) {
+      button.textContent = "Dank je";
+    }
+  } catch (error) {
+    if (button) {
+      button.disabled = false;
+      button.textContent = originalButtonText;
+    }
+    if (errorEl) {
+      errorEl.textContent = error.message || fallbackMessage;
+    }
+  }
+}
+
+const newsletterForm = document.querySelector("[data-newsletter-form]");
 
 if (newsletterForm) {
   newsletterForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    newsletterForm.classList.add("is-submitted");
-    const button = newsletterForm.querySelector("button");
+    submitForm(newsletterForm, () => ({
+      email: newsletterForm.querySelector("#newsletter-modal-email").value,
+      website: newsletterForm.querySelector("#newsletter-modal-website").value,
+    }));
+  });
+}
 
-    if (button) {
-      button.textContent = "Dank je";
-    }
+const contactForm = document.querySelector("[data-contact-form]");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    submitForm(contactForm, () => ({
+      voornaam: contactForm.querySelector("#contact-voornaam").value,
+      achternaam: contactForm.querySelector("#contact-achternaam").value,
+      email: contactForm.querySelector("#contact-email").value,
+      bericht: contactForm.querySelector("#contact-message").value,
+      website: contactForm.querySelector("#contact-website").value,
+    }));
   });
 }

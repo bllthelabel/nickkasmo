@@ -1,0 +1,12 @@
+name = "nickkasmo-forms"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Not secret: this is a Brevo list identifier, not a credential.
+BREVO_LIST_ID = "4"
+# Must be a sender verified in Brevo (Settings > Senders, Domains & Dedicated IPs).
+BREVO_SENDER_EMAIL = "hallo@nickkasmo.nl"
+BREVO_SENDER_NAME = "NickKasmo.nl"
+# Inbox that receives contact form submissions.
+CONTACT_TO_EMAIL = "hallo@nickkasmo.nl"

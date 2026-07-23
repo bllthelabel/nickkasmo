@@ -1,0 +1,41 @@
+---
+layout: base.njk
+permalink: "contact/index.html"
+eleventyExcludeFromCollections: true
+title: Contact - NickKasmo.nl
+canonical: /contact/
+ogTitle: Contact - NickKasmo.nl
+metaDescription: "Stuur Nick Kasmo een bericht over een idee, vraag of project."
+ogDescription: "Neem contact op met Nick Kasmo via het contactformulier van NickKasmo.nl."
+jsonLd:
+  "@context": "https://schema.org"
+  "@type": "ContactPage"
+  name: "Contact - NickKasmo.nl"
+  url: "https://nickkasmo.nl/contact/"
+---
+<section class="contact-hero">
+  <p class="eyebrow">Contact</p>
+  <h1>Waar ben je mee bezig?</h1>
+  <p>Stuur me een bericht over een idee, vraag of iets dat je zelf aan het maken bent.</p>
+</section>
+
+<section class="section contact-page-section" aria-label="Contactformulier">
+  <div class="contact-page-form">
+    <form class="contact-form" data-contact-form data-endpoint="{{ site.formsWorkerUrl }}/contact">
+      <label for="contact-voornaam">Voornaam</label>
+      <input id="contact-voornaam" name="voornaam" type="text" autocomplete="given-name" required>
+      <label for="contact-achternaam">Achternaam</label>
+      <input id="contact-achternaam" name="achternaam" type="text" autocomplete="family-name" required>
+      <label for="contact-email">E-mail</label>
+      <input id="contact-email" name="email" type="email" autocomplete="email" required>
+      <label for="contact-message">Bericht</label>
+      <textarea id="contact-message" name="bericht" rows="6" required></textarea>
+      <div class="form-honeypot" aria-hidden="true">
+        <label for="contact-website">Website</label>
+        <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <p class="form-error" data-form-error role="alert"></p>
+      <button class="button button--primary" type="submit">Verstuur bericht</button>
+    </form>
+  </div>
+</section>
