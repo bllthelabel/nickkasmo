@@ -56,7 +56,7 @@ jsonLd:
         <h3>{{ item.data.title }}</h3>
         <p>{{ item.templateContent | safe }}</p>
         {% if item.data.affiliateLink %}
-        <a class="item-card__action" href="{{ item.data.affiliateLink }}" target="_blank" rel="noreferrer sponsored">Bekijk affiliate link</a>
+        <a class="item-card__action" href="{{ item.data.affiliateLink }}" target="_blank" rel="noreferrer sponsored">Meer info</a>
         {% else %}
         <button type="button" class="item-card__action" disabled>Affiliate link toevoegen</button>
         {% endif %}
