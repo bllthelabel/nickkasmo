@@ -1,5 +1,7 @@
 # Homepage
 
+De pagina loopt nu in deze volgorde: Hero → Wie is Nick → Contact-uitnodiging → Items → Video's → Projecten → Blog → Nieuwsbrief → Filosofie → Volg mijn reis.
+
 ## Hero (bovenaan)
 
 **Eyebrow:** NickKasmo.nl
@@ -8,7 +10,7 @@
 
 **Intro:** Geen gladgestreken verhaal, maar eerlijk: bouwen, verdwalen, doorgaan. Wat ik onderweg maak, tegenkom en leer.
 
-**Knop 1:** Naar blog
+**Knop 1:** Wie ben ik (springt naar de "Wie is Nick"-sectie)
 
 **Knop 2:** Bekijk video's
 
@@ -17,18 +19,6 @@
 - **Wat ik maak** — De dingen die ik onderweg maak en met me meedraag.
 - **Wat ik meemaak** — Steden, gesprekken, smaken en uitzichten die ik onderweg tegenkom.
 - **Wat ik doormaak** — Verkeerde afslagen en lessen die niet op de ansichtkaart komen.
-
-## "Binnenkort op de blog"-kaart
-
-**Eyebrow:** Binnenkort op de blog
-
-**Titel:** Eerste eigen verhalen in voorbereiding.
-
-**Kleine regel:** Maken · Meemaken · Doormaken
-
-**Tekst:** Ik publiceer hier alleen verhalen die ik zelf heb geschreven en echt wil delen. Tot die tijd verzamel ik onderweg mijn gedachten, experimenten en lessen.
-
-**Knop:** Blijf op de hoogte
 
 ## "Wie is Nick?"
 
@@ -44,39 +34,17 @@
 
 **Paragraaf 4:** Alles begint met nieuwsgierigheid. Daarna vertrek ik gewoon, ook al weet ik de weg nog niet.
 
-## Blog-sectie
+*(Deze tekst staat ook los op de eigen pagina /over-mij/, zie 07-over-mij.md)*
 
-**Eyebrow:** Blog
+## Contact-uitnodiging (direct na "Wie is Nick")
 
-**Titel:** Wat ik maak, meemaak en doormaak
+**Eyebrow:** Samenwerken
 
-**Link:** Naar blog
+**Titel:** Een idee dat om vorm vraagt?
 
-**Filter-kopje:** Verken per pijler
+**Tekst:** Heb je iets dat nog ergens halverwege ligt? Soms neem ik een opdracht aan, als die bij mijn reis past. Stuur het gerust — ik denk er vrijblijvend over mee.
 
-**Filterknoppen:** Alles / Wat ik maak / Wat ik meemaak / Wat ik doormaak
-
-**Als er nog geen artikelen zijn:**
-- Label: Blog
-- Titel: 0 artikelen geplaatst
-- Tekst: Ik toon hier straks alleen stukken die ik zelf heb gepubliceerd.
-- Knop: Ontvang de eerste update
-
-**Als er meer dan 4 artikelen zijn, knop:** Meer artikelen
-
-## Nieuwsbrief-sectie (inline op de homepage)
-
-**Eyebrow:** Nieuwsbrief
-
-**Titel:** Eerlijk onderweg blijven.
-
-**Intro:** Af en toe een bericht over wat ik onderweg bouw, tegenkom en leer.
-
-**Label naast het veld:** Inschrijven op nieuwsbrief
-
-**Knop:** Open aanmeldformulier
-
-**Kleine tekst:** Geen hype. Geen mooie vakantiefoto's. Gewoon wat ik onderweg tegenkom.
+**Knop:** Stuur een bericht (linkt naar /contact/)
 
 ## Items-sectie ("Items die ik gebruik")
 
@@ -134,26 +102,41 @@
 - Tekst: Een plek voor beelden van koffie, reizen en werk dat onderweg ontstaat.
 - Link: Bekijk video's
 
-## "Drie pijlers"-sectie
+## Blog-sectie
 
-**Eyebrow:** Drie pijlers
+**Eyebrow:** Blog
 
-**Titel:** Een perfecte route is nooit de lat. De lat is: vertrokken zijn.
+**Titel:** Wat ik maak, meemaak en doormaak
 
-**Kaart 1 — Wat ik maak:**
-- De dingen die ik onderweg maak en met me meedraag.
-- Projecten en tools die ontstaan omdat ik ze onderweg nodig had, of gewoon wilde laten bestaan.
-- Link: Bekijk artikelen
+**Link:** Naar blog
 
-**Kaart 2 — Wat ik meemaak:**
-- Steden, gesprekken, smaken en uitzichten die ik onderweg tegenkom.
-- Dingen die niet van mij zijn, maar me wel veranderen.
-- Link: Bekijk artikelen
+**Filter-kopje:** Verken per pijler
 
-**Kaart 3 — Wat ik doormaak:**
-- Verkeerde afslagen, vertragingen en de momenten dat ik de kaart weer moet pakken.
-- Alles wat bij de reis hoort, maar niet op de ansichtkaart komt.
-- Link: Bekijk artikelen
+**Filterknoppen:** Alles / Wat ik maak / Wat ik meemaak / Wat ik doormaak
+
+**Als er nog geen artikelen zijn:**
+- Label: Blog
+- Titel: Ik ben net vertrokken.
+- Tekst: De eerste artikelen staan hier zodra ze af zijn. Kom over een paar weken terug.
+- *(geen knop — dit is geruststelling, geen tweede verkooppoging)*
+
+**Als er meer dan 4 artikelen zijn, knop:** Meer artikelen
+
+## Nieuwsbrief-sectie (inline aanmeldformulier)
+
+**Eyebrow:** Nieuwsbrief
+
+**Titel:** Eerlijk onderweg blijven.
+
+**Intro:** Af en toe een bericht over wat ik onderweg bouw, tegenkom en leer.
+
+**Label naast het veld:** Inschrijven op nieuwsbrief
+
+**Knop:** Inschrijven
+
+**Kleine tekst:** Geen hype. Geen mooie vakantiefoto's. Gewoon wat ik onderweg tegenkom.
+
+*(Dit is een van de twee overgebleven aanmeldmomenten op de homepage — het tweede is de nieuwsbrief-popup vanuit navigatie/footer, zie 01-navigatie-en-footer.md)*
 
 ## "Mijn filosofie"
 
@@ -175,7 +158,7 @@
 
 **Tekst:** Wat ik onderweg bouw, tegenkom en leer. Rustig, eerlijk en zonder mooie vakantiefoto's.
 
-**Knop:** Inschrijven op nieuwsbrief
+**Links:** Bekijk mijn werk (naar /portfolio/), plus Instagram, YouTube, LinkedIn
 
 ## SEO / meta (niet zichtbaar op de pagina)
 

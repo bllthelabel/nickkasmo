@@ -4,14 +4,14 @@ Deze teksten staan op elke pagina.
 
 ## Hoofdmenu
 
-- Home
 - Blog
 - Portfolio
 - Items
 - Video's
-- Nieuwsbrief
 - Over mij
 - Contact
+
+*(Het logo linkt al naar de homepage, dus "Home" staat niet los in het menu. "Nieuwsbrief" is uit het menu gehaald — de aanmeldmomenten staan al op meerdere plekken in de pagina's zelf.)*
 
 ## Footer
 

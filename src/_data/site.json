@@ -7,8 +7,7 @@
     { "label": "Portfolio", "href": "/portfolio/" },
     { "label": "Items", "href": "/items/" },
     { "label": "Video's", "href": "/#videos" },
-    { "label": "Nieuwsbrief", "href": "/#nieuwsbrief", "newsletter": true },
-    { "label": "Over mij", "href": "/#wie-is-nick" },
+    { "label": "Over mij", "href": "/over-mij/" },
     { "label": "Contact", "href": "/contact/" }
   ],
   "socials": [

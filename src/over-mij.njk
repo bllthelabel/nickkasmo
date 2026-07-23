@@ -1,0 +1,27 @@
+---
+layout: base.njk
+permalink: "over-mij/index.html"
+eleventyExcludeFromCollections: true
+title: Over mij - NickKasmo.nl
+canonical: /over-mij/
+ogTitle: Over mij - NickKasmo.nl
+metaDescription: "Wie is Nick Kasmo? Content marketeer, bouwer van een eigen kledingmerk en AI-experimenteerder — het verhaal achter NickKasmo.nl."
+ogDescription: "Het verhaal achter NickKasmo.nl: wie Nick is en waarom hij deelt wat hij onderweg maakt, meemaakt en doormaakt."
+jsonLd:
+  "@context": "https://schema.org"
+  "@type": "AboutPage"
+  name: "Over mij - NickKasmo.nl"
+  url: "https://nickkasmo.nl/over-mij/"
+---
+<section class="contact-hero">
+  <p class="eyebrow">{{ home.about.eyebrow }}</p>
+  <h1>{{ home.about.title }}</h1>
+</section>
+
+<section class="section" aria-label="Over Nick">
+  <div class="prose-block">
+    {%- for paragraph in home.about.paragraphs %}
+    <p>{{ paragraph }}</p>
+    {%- endfor %}
+  </div>
+</section>

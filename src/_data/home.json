@@ -4,12 +4,6 @@
     "title": "Onderweg met Nick.",
     "intro": "Geen gladgestreken verhaal, maar eerlijk: bouwen, verdwalen, doorgaan. Wat ik onderweg maak, tegenkom en leer."
   },
-  "featured": {
-    "eyebrow": "Binnenkort op de blog",
-    "title": "Eerste eigen verhalen in voorbereiding.",
-    "meta": "Maken · Meemaken · Doormaken",
-    "text": "Ik publiceer hier alleen verhalen die ik zelf heb geschreven en echt wil delen. Tot die tijd verzamel ik onderweg mijn gedachten, experimenten en lessen."
-  },
   "about": {
     "eyebrow": "Wie is Nick?",
     "title": "Hi, ik ben Nick.",
@@ -55,15 +49,6 @@
       { "icon": "shirt", "label": "Kleding", "title": "Kledingmerk", "text": "Nieuwe designs, webshopwerk en de keuzes achter iets dat ik al jaren onderweg bouw.", "linkLabel": "Bekijk pijler", "linkHref": "/blog/wat-ik-maak/" },
       { "icon": "sparkles", "label": "AI Tools", "title": "AI experimenten", "text": "Kleine tools en prototypes waarmee ik onderweg sneller kan proberen, leren en bijsturen.", "linkLabel": "Bekijk pijler", "linkHref": "/blog/wat-ik-maak/" },
       { "icon": "camera", "label": "Video", "title": "Recente video's", "text": "Een plek voor beelden van koffie, reizen en werk dat onderweg ontstaat.", "linkLabel": "Bekijk video's", "linkHref": "/#videos" }
-    ]
-  },
-  "focus": {
-    "eyebrow": "Drie pijlers",
-    "title": "Een perfecte route is nooit de lat. De lat is: vertrokken zijn.",
-    "cards": [
-      { "icon": "sparkles", "title": "Wat ik maak", "lines": ["De dingen die ik onderweg maak en met me meedraag.", "Projecten en tools die ontstaan omdat ik ze onderweg nodig had, of gewoon wilde laten bestaan."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-maak/" },
-      { "icon": "plane", "title": "Wat ik meemaak", "lines": ["Steden, gesprekken, smaken en uitzichten die ik onderweg tegenkom.", "Dingen die niet van mij zijn, maar me wel veranderen."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-meemaak/" },
-      { "icon": "book-open", "title": "Wat ik doormaak", "lines": ["Verkeerde afslagen, vertragingen en de momenten dat ik de kaart weer moet pakken.", "Alles wat bij de reis hoort, maar niet op de ansichtkaart komt."], "linkLabel": "Bekijk artikelen", "linkHref": "/blog/wat-ik-doormaak/" }
     ]
   },
   "philosophy": {

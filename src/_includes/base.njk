@@ -37,9 +37,8 @@
         <span class="visually-hidden">Menu</span>
       </button>
       <nav class="nav" id="site-nav" aria-label="Hoofdnavigatie">
-        <a href="/"{% if canonical == "/" %} aria-current="page"{% endif %}>Home</a>
         {%- for item in site.nav %}
-        <a href="{{ item.href }}"{% if item.newsletter %} data-newsletter-open{% endif %}{% if item.href == canonical %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        <a href="{{ item.href }}"{% if item.href == canonical %} aria-current="page"{% endif %}>{{ item.label }}</a>
         {%- endfor %}
       </nav>
     </header>
@@ -62,7 +61,7 @@
 
       <nav class="footer-nav" aria-label="Footer navigatie">
         {%- for item in site.nav %}
-        <a href="{{ item.href }}"{% if item.newsletter %} data-newsletter-open{% endif %}>{{ item.label }}</a>
+        <a href="{{ item.href }}">{{ item.label }}</a>
         {%- endfor %}
       </nav>
 

@@ -10,6 +10,7 @@ Alle teksten van nickkasmo.nl die **niet** via Decap CMS (`/admin`) te bewerken 
 - `04-portfolio.md` — portfoliopagina
 - `05-items.md` — "Items die ik gebruik"-pagina
 - `06-contact.md` — contactpagina
+- `07-over-mij.md` — over mij-pagina
 
 ## Hoe werkt dit?
 
